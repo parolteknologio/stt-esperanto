@@ -17,4 +17,4 @@ Future Deepspeech modell for Esperanto
 > scp -r  usergpu@185.x.x.x:/home/usergpu/.local/share/deepspeech/checkpoints/ /Users/nomo/
 
 Todo:
--run in bacground
+- run ssh process in background (background + disown process)

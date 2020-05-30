@@ -1,8 +1,7 @@
 # deepspeech-esperanto
 Future Deepspeech modell for Esperanto
 * https://github.com/mozilla/DeepSpeech
-* https://github.com/mozilla/DeepSpeech/blob/master/doc/TRAINING.rst#training-your-own-model
-
+* https://deepspeech.readthedocs.io/en/v0.7.1/TRAINING.html
 
 |Dataset|Parameters|Hardware|Results|
 |--|--|--|--|

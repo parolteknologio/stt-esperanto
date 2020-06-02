@@ -11,7 +11,7 @@ Future Deepspeech modell for Esperanto
 
 ## Todo:
 - run ssh process in background next time (background + disown process)
-- experiment with different data sources e.g. delete sentences with one no-vote
+- experiment with different data tables e.g. ignore sentences with one no-vote
 - extract the [Tatoeba](https://tatoeba.org/epo/sentences/search?query=&from=epo&to=none&user=&orphans=no&unapproved=no&has_audio=yes&tags=&list=&native=&trans_filter=limit&trans_to=und&trans_link=&trans_user=&trans_orphan=&trans_unapproved=&trans_has_audio=&sort=relevance&sort_reverse=) corpus with the script from https://github.com/DanBmh/deepspeech-german
 - create kenlm language model (scorer). https://tiefenauer.github.io/blog/wiki-n-gram-lm/ https://github.com/kpu/kenlm
 

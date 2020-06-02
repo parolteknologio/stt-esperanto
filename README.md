@@ -17,3 +17,4 @@ Future Deepspeech modell for Esperanto
 
 Todo:
 - run ssh process in background (background + disown process)
+- create kenlm language model (scorer). https://tiefenauer.github.io/blog/wiki-n-gram-lm/ https://github.com/kpu/kenlm

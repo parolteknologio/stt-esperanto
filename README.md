@@ -3,7 +3,7 @@ Future Deepspeech modell for Esperanto
 * https://github.com/mozilla/DeepSpeech
 * https://deepspeech.readthedocs.io/en/v0.7.1/TRAINING.html
 
-# potential data sources
+## potential data sources
 
 |Dataset|version|size|license|
 |--|--|--|--|
@@ -12,11 +12,11 @@ Future Deepspeech modell for Esperanto
 |[lingualibre](https://lingualibre.org/wiki/Help:Download_from_LinguaLibre)|03.06.20|425 MB|CC BY-SA|
 
 
-# experiments so far
+## experiments so far
 
 |Dataset|Parameters|Hardware|Results|
 |--|--|--|--|
-|eo_41h_2019-12-10|python3 DeepSpeech.py --train_files ../eo/clips/train.csv --dev_files ../eo/clips/dev.csv --test_files ../eo/clips/test.csv --automatic_mixed_precision --train_batch_size 16|2 x 1080 Ti 32Gb RAM (leadertelecom)|Time for one Epoch: 3h <br> Total Epochs:3 <br> unfinished|
+|eo_41h_2019-12-10|python3 DeepSpeech.py --train_files ../eo/clips/train.csv --dev_files ../eo/clips/dev.csv --test_files ../eo/clips/test.csv --automatic_mixed_precision --train_batch_size 16|2 x 1080 Ti 32Gb RAM (leadertelecom)|Time for one Epoch: 3h <br> Total Epochs:3 <br> unfinished, add epochs parameter next time|
 
 
 

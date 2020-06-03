@@ -9,6 +9,7 @@ Future Deepspeech modell for Esperanto
 |--|--|--|--|
 |[Common Voice](https://voice.mozilla.org/eo/datasets)|eo_41h_2019-12-10|1 GB 35 h|CC 0|
 |[tatoeba](https://tatoeba.org/epo/sentences/search?query=&from=epo&to=none&user=&orphans=no&unapproved=no&has_audio=yes&tags=&list=&native=&trans_filter=limit&trans_to=und&trans_link=&trans_user=&trans_orphan=&trans_unapproved=&trans_has_audio=&sort=relevance&sort_reverse=)|03.06.20|4 063 audio files|CC-BY|
+|[lingualibre](https://lingualibre.org/wiki/Help:Download_from_LinguaLibre)|03.06.20|425 MB|CC BY-SA|
 
 
 # experiments so far
@@ -16,6 +17,8 @@ Future Deepspeech modell for Esperanto
 |Dataset|Parameters|Hardware|Results|
 |--|--|--|--|
 |eo_41h_2019-12-10|python3 DeepSpeech.py --train_files ../eo/clips/train.csv --dev_files ../eo/clips/dev.csv --test_files ../eo/clips/test.csv --automatic_mixed_precision --train_batch_size 16|2 x 1080 Ti 32Gb RAM (leadertelecom)|Time for one Epoch: 3h <br> Total Epochs:3 <br> unfinished|
+
+
 
 
 

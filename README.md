@@ -8,6 +8,7 @@ Future Deepspeech modell for Esperanto
 |Datumaro|versio|grandeco|permesilo|
 |--|--|--|--|
 |[Common Voice](https://voice.mozilla.org/eo/datasets)|eo_41h_2019-12-10|1 GB 35 h|CC 0|
+|"|eo_89h_2020-06-22|> 2 GB 83 h|CC 0|
 |[tatoeba](https://tatoeba.org/epo/sentences/search?query=&from=epo&to=none&user=&orphans=no&unapproved=no&has_audio=yes&tags=&list=&native=&trans_filter=limit&trans_to=und&trans_link=&trans_user=&trans_orphan=&trans_unapproved=&trans_has_audio=&sort=relevance&sort_reverse=)|03.06.20|4 063 audio files|CC-BY|
 |[lingualibre](https://lingualibre.org/wiki/Help:Download_from_LinguaLibre)|03.06.20|425 MB|CC BY-SA|
 

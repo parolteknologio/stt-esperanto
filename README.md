@@ -2,6 +2,7 @@
 Future Deepspeech modell for Esperanto
 * https://github.com/mozilla/DeepSpeech
 * https://deepspeech.readthedocs.io/en/v0.7.1/TRAINING.html
+* https://gitlab.com/Jaco-Assistant/deepspeech-polyglot
 
 ## eblaj datumfontoj
 

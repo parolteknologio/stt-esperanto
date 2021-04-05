@@ -3,6 +3,7 @@ Future Deepspeech modell for Esperanto
 * https://github.com/mozilla/DeepSpeech
 * https://deepspeech.readthedocs.io/en/v0.7.1/TRAINING.html
 * https://gitlab.com/Jaco-Assistant/deepspeech-polyglot
+* Tim jam kreis sistemon en esperantto: https://gitlab.com/54696d21
 
 ## eblaj datumfontoj
 

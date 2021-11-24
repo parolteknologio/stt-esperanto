@@ -1,0 +1,1358 @@
+Transfer learning from https://github.com/coqui-ai/STT/releases/download/v1.0.0/coqui-stt-1.0.0-checkpoint.tar.gz
+
+{
+    "train_files": [
+        "/content/data/content/data/cv-corpus-7/eo/clips/train-all.csv"
+    ],
+    "dev_files": [
+        "/content/data/content/data/cv-corpus-7/eo/clips/dev.csv"
+    ],
+    "test_files": [
+        "/content/data/content/data/cv-corpus-7/eo/clips/test.csv"
+    ],
+    "metrics_files": [],
+    "auto_input_dataset": "",
+    "vocab_file": "",
+    "read_buffer": 1048576,
+    "feature_cache": "",
+    "cache_for_epochs": 0,
+    "shuffle_batches": false,
+    "shuffle_start": 1,
+    "shuffle_buffer": 1000,
+    "feature_win_len": 32,
+    "feature_win_step": 20,
+    "audio_sample_rate": 16000,
+    "normalize_sample_rate": true,
+    "augment": null,
+    "epochs": 5,
+    "dropout_rate": 0.3,
+    "dropout_rate2": 0.3,
+    "dropout_rate3": 0.3,
+    "dropout_rate4": 0.0,
+    "dropout_rate5": 0.0,
+    "dropout_rate6": 0.3,
+    "relu_clip": 20.0,
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "epsilon": 1e-08,
+    "learning_rate": 0.0001,
+    "train_batch_size": 16,
+    "dev_batch_size": 16,
+    "test_batch_size": 16,
+    "export_batch_size": 16,
+    "inter_op_parallelism_threads": 0,
+    "intra_op_parallelism_threads": 0,
+    "use_allow_growth": false,
+    "load_cudnn": true,
+    "train_cudnn": false,
+    "automatic_mixed_precision": false,
+    "limit_train": 0,
+    "limit_dev": 0,
+    "limit_test": 0,
+    "reverse_train": false,
+    "reverse_dev": false,
+    "reverse_test": false,
+    "checkpoint_dir": "",
+    "load_checkpoint_dir": "/content/en/coqui-stt-1.0.0-checkpoint",
+    "save_checkpoint_dir": "/content/eo/checkpoints",
+    "checkpoint_secs": 600,
+    "max_to_keep": 5,
+    "load_train": "best",
+    "load_evaluate": "auto",
+    "drop_source_layers": 1,
+    "export_dir": "/content/eo/exports",
+    "remove_export": false,
+    "export_tflite": true,
+    "export_quantize": true,
+    "n_steps": 16,
+    "export_zip": false,
+    "export_file_name": "output_graph",
+    "export_beam_width": 500,
+    "export_author_id": "author",
+    "export_model_name": "model",
+    "export_model_version": "0.0.1",
+    "export_contact_info": "<public contact information of the author. Can be an email address, or a link to a contact form, issue tracker, or discussion forum. Must provide a way to reach the model authors>",
+    "export_license": "<SPDX identifier of the license of the exported model. See https://spdx.org/licenses/. If the license does not have an SPDX identifier, use the license name.>",
+    "export_language": "<language the model was trained on - IETF BCP 47 language tag including at least language, script and region subtags. E.g. \"en-Latn-UK\" or \"de-Latn-DE\" or \"cmn-Hans-CN\". Include as much info as you can without loss of precision. For example, if a model is trained on Scottish English, include the variant subtag: \"en-Latn-GB-Scotland\".>",
+    "export_min_stt_version": "<minimum Coqui STT version (inclusive) the exported model is compatible with>",
+    "export_max_stt_version": "<maximum Coqui STT version (inclusive) the exported model is compatible with>",
+    "export_description": "<Freeform description of the model being exported. Markdown accepted. You can also leave this flag unchanged and edit the generated .md file directly. Useful things to describe are demographic and acoustic characteristics of the data used to train the model, any architectural changes, names of public datasets that were used when applicable, hyperparameters used for training, evaluation results on standard benchmark datasets, etc.>",
+    "log_level": 1,
+    "show_progressbar": true,
+    "log_placement": false,
+    "report_count": 5,
+    "summary_dir": "/root/.local/share/stt/summaries",
+    "test_output_file": "",
+    "n_hidden": 2048,
+    "layer_norm": false,
+    "random_seed": 4568,
+    "early_stop": false,
+    "es_epochs": 25,
+    "es_min_delta": 0.05,
+    "reduce_lr_on_plateau": false,
+    "plateau_epochs": 10,
+    "plateau_reduction": 0.1,
+    "force_initialize_learning_rate": false,
+    "bytes_output_mode": false,
+    "alphabet_config_path": "/content/eo/alphabet.txt",
+    "scorer_path": "/content/eo/kenlm.scorer",
+    "beam_width": 1024,
+    "lm_alpha": 0.931289039105002,
+    "lm_beta": 1.1834137581510284,
+    "cutoff_prob": 1.0,
+    "cutoff_top_n": 300,
+    "one_shot_infer": null,
+    "lm_alpha_max": 5,
+    "lm_beta_max": 5,
+    "n_trials": 2400
+}
+
+W WARNING: You specified different values for --load_checkpoint_dir and --save_checkpoint_dir, but you are running training and testing in a single invocation. The testing step will respect --load_checkpoint_dir, and thus WILL NOT TEST THE CHECKPOINT CREATED BY THE TRAINING STEP. Train and test in two separate invocations, specifying the correct --load_checkpoint_dir in both cases, or use the same location for loading and saving.
+W WARNING: You specified different values for --load_checkpoint_dir and --save_checkpoint_dir, but you are running training and testing in a single invocation. The testing step will respect --load_checkpoint_dir, and thus WILL NOT TEST THE CHECKPOINT CREATED BY THE TRAINING STEP. Train and test in two separate invocations, specifying the correct --load_checkpoint_dir in both cases, or use the same location for loading and saving.
+I Loading best validating checkpoint from /content/en/coqui-stt-1.0.0-checkpoint/best_dev-3663881
+W CUDNN variable not found: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias/Adam
+W CUDNN variable not found: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel/Adam_1
+W CUDNN variable not found: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel/Adam
+W CUDNN variable not found: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias/Adam_1
+I Loading variable from checkpoint: beta1_power
+I Loading variable from checkpoint: beta2_power
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel
+I Loading variable from checkpoint: global_step
+I Loading variable from checkpoint: layer_1/bias
+I Loading variable from checkpoint: layer_1/bias/Adam
+I Loading variable from checkpoint: layer_1/bias/Adam_1
+I Loading variable from checkpoint: layer_1/weights
+I Loading variable from checkpoint: layer_1/weights/Adam
+I Loading variable from checkpoint: layer_1/weights/Adam_1
+I Loading variable from checkpoint: layer_2/bias
+I Loading variable from checkpoint: layer_2/bias/Adam
+I Loading variable from checkpoint: layer_2/bias/Adam_1
+I Loading variable from checkpoint: layer_2/weights
+I Loading variable from checkpoint: layer_2/weights/Adam
+I Loading variable from checkpoint: layer_2/weights/Adam_1
+I Loading variable from checkpoint: layer_3/bias
+I Loading variable from checkpoint: layer_3/bias/Adam
+I Loading variable from checkpoint: layer_3/bias/Adam_1
+I Loading variable from checkpoint: layer_3/weights
+I Loading variable from checkpoint: layer_3/weights/Adam
+I Loading variable from checkpoint: layer_3/weights/Adam_1
+I Loading variable from checkpoint: layer_5/bias
+I Loading variable from checkpoint: layer_5/bias/Adam
+I Loading variable from checkpoint: layer_5/bias/Adam_1
+I Loading variable from checkpoint: layer_5/weights
+I Loading variable from checkpoint: layer_5/weights/Adam
+I Loading variable from checkpoint: layer_5/weights/Adam_1
+I Loading variable from checkpoint: learning_rate
+I Initializing variable: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias/Adam
+I Initializing variable: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias/Adam_1
+I Initializing variable: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel/Adam
+I Initializing variable: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel/Adam_1
+I Initializing variable: layer_6/bias
+I Initializing variable: layer_6/bias/Adam
+I Initializing variable: layer_6/bias/Adam_1
+I Initializing variable: layer_6/weights
+I Initializing variable: layer_6/weights/Adam
+I Initializing variable: layer_6/weights/Adam_1
+I STARTING Optimization
+Epoch 0 |   Training | Elapsed Time: 2:44:59 | Steps: 21202 | Loss: 38.027919  
+Epoch 0 | Validation | Elapsed Time: 0:01:59 | Steps: 898 | Loss: 29.562842 | Dataset: /content/data/content/data/cv-corpus-7/eo/clips/dev.csv
+I Saved new best validating model with loss 29.562842 to: /content/eo/checkpoints/best_dev-3685083
+--------------------------------------------------------------------------------
+Epoch 1 |   Training | Elapsed Time: 2:44:09 | Steps: 21202 | Loss: 23.059815  
+Epoch 1 | Validation | Elapsed Time: 0:01:56 | Steps: 898 | Loss: 25.394825 | Dataset: /content/data/content/data/cv-corpus-7/eo/clips/dev.csv
+I Saved new best validating model with loss 25.394825 to: /content/eo/checkpoints/best_dev-3706285
+--------------------------------------------------------------------------------
+Epoch 2 |   Training | Elapsed Time: 2:43:46 | Steps: 21202 | Loss: 19.284186  
+Epoch 2 | Validation | Elapsed Time: 0:01:58 | Steps: 898 | Loss: 22.766518 | Dataset: /content/data/content/data/cv-corpus-7/eo/clips/dev.csv
+I Saved new best validating model with loss 22.766518 to: /content/eo/checkpoints/best_dev-3727487
+--------------------------------------------------------------------------------
+Epoch 3 |   Training | Elapsed Time: 2:43:46 | Steps: 21202 | Loss: 16.819918  
+Epoch 3 | Validation | Elapsed Time: 0:01:56 | Steps: 898 | Loss: 20.651659 | Dataset: /content/data/content/data/cv-corpus-7/eo/clips/dev.csv
+I Saved new best validating model with loss 20.651659 to: /content/eo/checkpoints/best_dev-3748689
+--------------------------------------------------------------------------------
+Epoch 4 |   Training | Elapsed Time: 2:43:44 | Steps: 21202 | Loss: 15.228813  
+Epoch 4 | Validation | Elapsed Time: 0:01:56 | Steps: 898 | Loss: 19.545898 | Dataset: /content/data/content/data/cv-corpus-7/eo/clips/dev.csv
+I Saved new best validating model with loss 19.545898 to: /content/eo/checkpoints/best_dev-3769891
+--------------------------------------------------------------------------------
+I FINISHED optimization in 13:50:19.177795
+
+
+I Loading best validating checkpoint from /content/eo/checkpoints/best_dev-3769891
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel
+I Loading variable from checkpoint: global_step
+I Loading variable from checkpoint: layer_1/bias
+I Loading variable from checkpoint: layer_1/weights
+I Loading variable from checkpoint: layer_2/bias
+I Loading variable from checkpoint: layer_2/weights
+I Loading variable from checkpoint: layer_3/bias
+I Loading variable from checkpoint: layer_3/weights
+I Loading variable from checkpoint: layer_5/bias
+I Loading variable from checkpoint: layer_5/weights
+I Loading variable from checkpoint: layer_6/bias
+I Loading variable from checkpoint: layer_6/weights
+Testing model on /content/data/content/data/cv-corpus-7/eo/clips/test.csv
+Test epoch | Steps: 895 | Elapsed Time: 0:06:03                                
+Test on /content/data/content/data/cv-corpus-7/eo/clips/test.csv - WER: 0.277609, CER: 0.095459, loss: 21.627028
+--------------------------------------------------------------------------------
+Best WER: 
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 53.965714
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_23755619.wav
+ - src: "lastatempe influa irlandano atentigis ke por irlando la du mondomilitoj neniam okazis"
+ - res: "lastatempe influa irlandano atentigis ke por irlando la du mondomilitoj neniam okazis"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 45.962036
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27395710.wav
+ - src: "meznokte oni kolektis tiujn rubojn kaj matene la stratoj estis senrubaj"
+ - res: "meznokte oni kolektis tiujn rubojn kaj matene la stratoj estis senrubaj"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 45.844387
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27242102.wav
+ - src: "post ricevo de la germana civitaneco plibonigis rekordon de la federacia respubliko germanio"
+ - res: "post ricevo de la germana civitaneco plibonigis rekordon de la federacia respubliko germanio"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 45.685513
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_18495714.wav
+ - src: "la doktoro kredis rekoni la simptomojn de cerba brulumo"
+ - res: "la doktoro kredis rekoni la simptomojn de cerba brulumo"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 45.552479
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_25567088.wav
+ - src: "la bazo de la ekonomiko estis agrokulturo aliaj industrioj estis malpli evoluintaj"
+ - res: "la bazo de la ekonomiko estis agrokulturo aliaj industrioj estis malpli evoluintaj"
+--------------------------------------------------------------------------------
+Median WER: 
+--------------------------------------------------------------------------------
+WER: 0.250000, CER: 0.156863, loss: 25.340481
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27400197.wav
+ - src: "nur grekujo eble povus baldaŭ revizii sian pozicion"
+ - res: "nur grekujo eble povus lazarevic sian pozicion"
+--------------------------------------------------------------------------------
+WER: 0.250000, CER: 0.032258, loss: 25.308199
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_24478027.wav
+ - src: "la malgranda vilaĝo havas romkatolikan kaj luteranan preĝejojn"
+ - res: "la malgranda vilago havas romkatolikan kaj luteranan pregejojn"
+--------------------------------------------------------------------------------
+WER: 0.250000, CER: 0.214286, loss: 25.242109
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_20531561.wav
+ - src: "li diris al si"
+ - res: "li diris si"
+--------------------------------------------------------------------------------
+WER: 0.250000, CER: 0.081967, loss: 25.187151
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27198233.wav
+ - src: "postmorte povas esti donitaj ankaŭ ekzemple akademiaj titoloj"
+ - res: "postmorte povas esti donitaj ankau ekzemple akademiaj retoj"
+--------------------------------------------------------------------------------
+WER: 0.250000, CER: 0.093023, loss: 25.126263
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_26746256.wav
+ - src: "sekve ili evitis batali unu kontraŭ la alia"
+ - res: "sekve ili evitis batali unu kontrau alia"
+--------------------------------------------------------------------------------
+Worst WER: 
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.500000, loss: 4.472839
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_26197612.wav
+ - src: "ridu"
+ - res: "pri du"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.100000, loss: 3.376269
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27394597.wav
+ - src: "nedankinde"
+ - res: "ne dankinde"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.333333, loss: 3.008640
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27433067.wav
+ - src: "japano"
+ - res: "la pano"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.125000, loss: 2.051776
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27351660.wav
+ - src: "dufojojn"
+ - res: "du fojojn"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.500000, loss: 2.002869
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_26980866.wav
+ - src: "nura"
+ - res: "nu la"
+--------------------------------------------------------------------------------
+
+
+
+5-10
+
+
+I Loading best validating checkpoint from /content/eo/checkpoints/best_dev-3769891
+I Loading variable from checkpoint: beta1_power
+I Loading variable from checkpoint: beta2_power
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias/Adam
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias/Adam_1
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel/Adam
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel/Adam_1
+I Loading variable from checkpoint: global_step
+I Loading variable from checkpoint: layer_1/bias
+I Loading variable from checkpoint: layer_1/bias/Adam
+I Loading variable from checkpoint: layer_1/bias/Adam_1
+I Loading variable from checkpoint: layer_1/weights
+I Loading variable from checkpoint: layer_1/weights/Adam
+I Loading variable from checkpoint: layer_1/weights/Adam_1
+I Loading variable from checkpoint: layer_2/bias
+I Loading variable from checkpoint: layer_2/bias/Adam
+I Loading variable from checkpoint: layer_2/bias/Adam_1
+I Loading variable from checkpoint: layer_2/weights
+I Loading variable from checkpoint: layer_2/weights/Adam
+I Loading variable from checkpoint: layer_2/weights/Adam_1
+I Loading variable from checkpoint: layer_3/bias
+I Loading variable from checkpoint: layer_3/bias/Adam
+I Loading variable from checkpoint: layer_3/bias/Adam_1
+I Loading variable from checkpoint: layer_3/weights
+I Loading variable from checkpoint: layer_3/weights/Adam
+I Loading variable from checkpoint: layer_3/weights/Adam_1
+I Loading variable from checkpoint: layer_5/bias
+I Loading variable from checkpoint: layer_5/bias/Adam
+I Loading variable from checkpoint: layer_5/bias/Adam_1
+I Loading variable from checkpoint: layer_5/weights
+I Loading variable from checkpoint: layer_5/weights/Adam
+I Loading variable from checkpoint: layer_5/weights/Adam_1
+I Loading variable from checkpoint: layer_6/bias
+I Loading variable from checkpoint: layer_6/bias/Adam
+I Loading variable from checkpoint: layer_6/bias/Adam_1
+I Loading variable from checkpoint: layer_6/weights
+I Loading variable from checkpoint: layer_6/weights/Adam
+I Loading variable from checkpoint: layer_6/weights/Adam_1
+I Loading variable from checkpoint: learning_rate
+I STARTING Optimization
+Epoch 0 |   Training | Elapsed Time: 3:01:24 | Steps: 21202 | Loss: 14.047410  
+Epoch 0 | Validation | Elapsed Time: 0:02:37 | Steps: 898 | Loss: 18.855527 | Dataset: /content/data/content/data/cv-corpus-7/eo/clips/dev.csv
+I Saved new best validating model with loss 18.855527 to: /content/eo/checkpoints/best_dev-3791093
+--------------------------------------------------------------------------------
+Epoch 1 |   Training | Elapsed Time: 3:01:00 | Steps: 21202 | Loss: 13.157148  
+Epoch 1 | Validation | Elapsed Time: 0:02:33 | Steps: 898 | Loss: 18.454937 | Dataset: /content/data/content/data/cv-corpus-7/eo/clips/dev.csv
+I Saved new best validating model with loss 18.454937 to: /content/eo/checkpoints/best_dev-3812295
+--------------------------------------------------------------------------------
+Epoch 2 |   Training | Elapsed Time: 3:00:52 | Steps: 21202 | Loss: 12.426324  
+Epoch 2 | Validation | Elapsed Time: 0:02:36 | Steps: 898 | Loss: 18.008489 | Dataset: /content/data/content/data/cv-corpus-7/eo/clips/dev.csv
+I Saved new best validating model with loss 18.008489 to: /content/eo/checkpoints/best_dev-3833497
+--------------------------------------------------------------------------------
+Epoch 3 |   Training | Elapsed Time: 3:01:15 | Steps: 21202 | Loss: 11.820688  
+Epoch 3 | Validation | Elapsed Time: 0:02:33 | Steps: 898 | Loss: 17.684534 | Dataset: /content/data/content/data/cv-corpus-7/eo/clips/dev.csv
+I Saved new best validating model with loss 17.684534 to: /content/eo/checkpoints/best_dev-3854699
+--------------------------------------------------------------------------------
+Epoch 4 |   Training | Elapsed Time: 3:00:36 | Steps: 21202 | Loss: 11.316597  
+Epoch 4 | Validation | Elapsed Time: 0:02:35 | Steps: 898 | Loss: 17.453145 | Dataset: /content/data/content/data/cv-corpus-7/eo/clips/dev.csv
+I Saved new best validating model with loss 17.453145 to: /content/eo/checkpoints/best_dev-3875901
+--------------------------------------------------------------------------------
+I FINISHED optimization in 15:18:23.407807
+I Loading best validating checkpoint from /content/eo/checkpoints/best_dev-3875901
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel
+I Loading variable from checkpoint: global_step
+I Loading variable from checkpoint: layer_1/bias
+I Loading variable from checkpoint: layer_1/weights
+I Loading variable from checkpoint: layer_2/bias
+I Loading variable from checkpoint: layer_2/weights
+I Loading variable from checkpoint: layer_3/bias
+I Loading variable from checkpoint: layer_3/weights
+I Loading variable from checkpoint: layer_5/bias
+I Loading variable from checkpoint: layer_5/weights
+I Loading variable from checkpoint: layer_6/bias
+I Loading variable from checkpoint: layer_6/weights
+Testing model on /content/data/content/data/cv-corpus-7/eo/clips/test.csv
+Test epoch | Steps: 895 | Elapsed Time: 0:15:42                                
+Test on /content/data/content/data/cv-corpus-7/eo/clips/test.csv - WER: 0.261773, CER: 0.087102, loss: 19.526434
+--------------------------------------------------------------------------------
+Best WER: 
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 52.909256
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27395710.wav
+ - src: "meznokte oni kolektis tiujn rubojn kaj matene la stratoj estis senrubaj"
+ - res: "meznokte oni kolektis tiujn rubojn kaj matene la stratoj estis senrubaj"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 45.510983
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_20851936.wav
+ - src: "la temo de la konferenco estis novaj vojoj de lernado"
+ - res: "la temo de la konferenco estis novaj vojoj de lernado"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 40.819176
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_18355736.wav
+ - src: "vi eraras sinjoro respondis la junulo"
+ - res: "vi eraras sinjoro respondis la junulo"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 39.029793
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_25650427.wav
+ - src: "respondo okazis eventoj kiujn mi plenforte malaprobas"
+ - res: "respondo okazis eventoj kiujn mi plenforte malaprobas"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 38.569962
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27375117.wav
+ - src: "la festivalo interalie volas emfazi ke la germanoj pensadas pri germanio"
+ - res: "la festivalo interalie volas emfazi ke la germanoj pensadas pri germanio"
+--------------------------------------------------------------------------------
+Median WER: 
+--------------------------------------------------------------------------------
+WER: 0.222222, CER: 0.065217, loss: 8.045938
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_23357906.wav
+ - src: "en ĉeĥio kaj slovakio ili estas uzataj ĝis nun"
+ - res: "en cehio kaj slovakio ili estas uzataj gis nun"
+--------------------------------------------------------------------------------
+WER: 0.222222, CER: 0.032787, loss: 7.969522
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_25482337.wav
+ - src: "post siaj studoj li komencis instrui en la teknikuniversitato"
+ - res: "post siaj studoj li komencis instrui en la teknika universitato"
+--------------------------------------------------------------------------------
+WER: 0.222222, CER: 0.041667, loss: 7.868604
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27357887.wav
+ - src: "tio ne estas domaĉo ĝi simple estas kovrita loko"
+ - res: "tio ne estas domaco vi simple estas kovrita loko"
+--------------------------------------------------------------------------------
+WER: 0.222222, CER: 0.046875, loss: 7.775086
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_23909841.wav
+ - src: "ties teritorion kreis municipoj inter riveroj odra kaj ostravice"
+ - res: "ties teritorion kreis municipoj inter riveroj ora kaj ostrovite"
+--------------------------------------------------------------------------------
+WER: 0.222222, CER: 0.078431, loss: 7.746072
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_26723905.wav
+ - src: "post la turka erao germanoj kaj serboj alvenis tien"
+ - res: "post la turka la germanoj kaj servoj alvenis tien"
+--------------------------------------------------------------------------------
+Worst WER: 
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.500000, loss: 4.719314
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_26197612.wav
+ - src: "ridu"
+ - res: "pri du"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.200000, loss: 4.211143
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_25972753.wav
+ - src: "nitro"
+ - res: "ni tro"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.100000, loss: 3.761604
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27394597.wav
+ - src: "nedankinde"
+ - res: "ne dankinde"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.333333, loss: 3.026105
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27433067.wav
+ - src: "japano"
+ - res: "la pano"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.125000, loss: 1.357714
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27351660.wav
+ - src: "dufojojn"
+ - res: "du fojojn"
+--------------------------------------------------------------------------------
+
+
+
+
+Note: training with batch size 8 for half an hour, this might have changed the best checkpoint. Then I proceeded with 16 
+
+
+
+
+
+
+
+10-15
+
+I Loading best validating checkpoint from /content/eo/checkpoints/best_dev-3875901
+I Loading variable from checkpoint: beta1_power
+I Loading variable from checkpoint: beta2_power
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias/Adam
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias/Adam_1
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel/Adam
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel/Adam_1
+I Loading variable from checkpoint: global_step
+I Loading variable from checkpoint: layer_1/bias
+I Loading variable from checkpoint: layer_1/bias/Adam
+I Loading variable from checkpoint: layer_1/bias/Adam_1
+I Loading variable from checkpoint: layer_1/weights
+I Loading variable from checkpoint: layer_1/weights/Adam
+I Loading variable from checkpoint: layer_1/weights/Adam_1
+I Loading variable from checkpoint: layer_2/bias
+I Loading variable from checkpoint: layer_2/bias/Adam
+I Loading variable from checkpoint: layer_2/bias/Adam_1
+I Loading variable from checkpoint: layer_2/weights
+I Loading variable from checkpoint: layer_2/weights/Adam
+I Loading variable from checkpoint: layer_2/weights/Adam_1
+I Loading variable from checkpoint: layer_3/bias
+I Loading variable from checkpoint: layer_3/bias/Adam
+I Loading variable from checkpoint: layer_3/bias/Adam_1
+I Loading variable from checkpoint: layer_3/weights
+I Loading variable from checkpoint: layer_3/weights/Adam
+I Loading variable from checkpoint: layer_3/weights/Adam_1
+I Loading variable from checkpoint: layer_5/bias
+I Loading variable from checkpoint: layer_5/bias/Adam
+I Loading variable from checkpoint: layer_5/bias/Adam_1
+I Loading variable from checkpoint: layer_5/weights
+I Loading variable from checkpoint: layer_5/weights/Adam
+I Loading variable from checkpoint: layer_5/weights/Adam_1
+I Loading variable from checkpoint: layer_6/bias
+I Loading variable from checkpoint: layer_6/bias/Adam
+I Loading variable from checkpoint: layer_6/bias/Adam_1
+I Loading variable from checkpoint: layer_6/weights
+I Loading variable from checkpoint: layer_6/weights/Adam
+I Loading variable from checkpoint: layer_6/weights/Adam_1
+I Loading variable from checkpoint: learning_rate
+I STARTING Optimization
+Epoch 0 |   Training | Elapsed Time: 3:01:04 | Steps: 21202 | Loss: 10.841427  
+Epoch 0 | Validation | Elapsed Time: 0:02:34 | Steps: 898 | Loss: 17.056179 | Dataset: /content/data/content/data/cv-corpus-7/eo/clips/dev.csv
+I Saved new best validating model with loss 17.056179 to: /content/eo/checkpoints/best_dev-3897103
+--------------------------------------------------------------------------------
+Epoch 1 |   Training | Elapsed Time: 3:00:56 | Steps: 21202 | Loss: 10.434507  
+Epoch 1 | Validation | Elapsed Time: 0:02:34 | Steps: 898 | Loss: 16.857691 | Dataset: /content/data/content/data/cv-corpus-7/eo/clips/dev.csv
+I Saved new best validating model with loss 16.857691 to: /content/eo/checkpoints/best_dev-3918305
+--------------------------------------------------------------------------------
+Epoch 2 |   Training | Elapsed Time: 3:00:44 | Steps: 21202 | Loss: 10.061769  
+Epoch 2 | Validation | Elapsed Time: 0:02:33 | Steps: 898 | Loss: 16.662279 | Dataset: /content/data/content/data/cv-corpus-7/eo/clips/dev.csv
+I Saved new best validating model with loss 16.662279 to: /content/eo/checkpoints/best_dev-3939507
+--------------------------------------------------------------------------------
+Epoch 3 |   Training | Elapsed Time: 3:00:34 | Steps: 21202 | Loss: 9.734009   
+Epoch 3 | Validation | Elapsed Time: 0:02:33 | Steps: 898 | Loss: 16.401220 | Dataset: /content/data/content/data/cv-corpus-7/eo/clips/dev.csv
+I Saved new best validating model with loss 16.401220 to: /content/eo/checkpoints/best_dev-3960709
+--------------------------------------------------------------------------------
+Epoch 4 |   Training | Elapsed Time: 3:00:26 | Steps: 21202 | Loss: 9.436198   
+Epoch 4 | Validation | Elapsed Time: 0:02:33 | Steps: 898 | Loss: 16.283944 | Dataset: /content/data/content/data/cv-corpus-7/eo/clips/dev.csv
+I Saved new best validating model with loss 16.283944 to: /content/eo/checkpoints/best_dev-3981911
+--------------------------------------------------------------------------------
+I FINISHED optimization in 15:16:54.081554
+I Loading best validating checkpoint from /content/eo/checkpoints/best_dev-3981911
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel
+I Loading variable from checkpoint: global_step
+I Loading variable from checkpoint: layer_1/bias
+I Loading variable from checkpoint: layer_1/weights
+I Loading variable from checkpoint: layer_2/bias
+I Loading variable from checkpoint: layer_2/weights
+I Loading variable from checkpoint: layer_3/bias
+I Loading variable from checkpoint: layer_3/weights
+I Loading variable from checkpoint: layer_5/bias
+I Loading variable from checkpoint: layer_5/weights
+I Loading variable from checkpoint: layer_6/bias
+I Loading variable from checkpoint: layer_6/weights
+Testing model on /content/data/content/data/cv-corpus-7/eo/clips/test.csv
+Test epoch | Steps: 895 | Elapsed Time: 0:15:47                                
+Test on /content/data/content/data/cv-corpus-7/eo/clips/test.csv - WER: 0.254005, CER: 0.082175, loss: 18.535946
+--------------------------------------------------------------------------------
+Best WER: 
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 45.489544
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_20686293.wav
+ - src: "ekzemploj estas la teorioj de klasika mekaniko relativeco kaj kvantuma mekaniko"
+ - res: "ekzemploj estas la teorioj de klasika mekaniko relativeco kaj kvantuma mekaniko"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 43.058884
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_25650427.wav
+ - src: "respondo okazis eventoj kiujn mi plenforte malaprobas"
+ - res: "respondo okazis eventoj kiujn mi plenforte malaprobas"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 42.813469
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_18355736.wav
+ - src: "vi eraras sinjoro respondis la junulo"
+ - res: "vi eraras sinjoro respondis la junulo"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 38.682507
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27375117.wav
+ - src: "la festivalo interalie volas emfazi ke la germanoj pensadas pri germanio"
+ - res: "la festivalo interalie volas emfazi ke la germanoj pensadas pri germanio"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 36.817307
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27451657.wav
+ - src: "mi iam vidis holovidprogramon kie oni eksplikis ke animstato influas digestadon"
+ - res: "mi iam vidis holovidprogramon kie oni eksplikis ke animstato influas digestadon"
+--------------------------------------------------------------------------------
+Median WER: 
+--------------------------------------------------------------------------------
+WER: 0.222222, CER: 0.162162, loss: 29.512438
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_17900209.wav
+ - src: "sed al la mono kiun mi komisiis al vi"
+ - res: "sed la mono kiun mi komisiis vi"
+--------------------------------------------------------------------------------
+WER: 0.222222, CER: 0.044118, loss: 29.186558
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_18373044.wav
+ - src: "anstataŭ prezenti siajn brakojn li malvarme eltiris sian poŝhorloĝon"
+ - res: "anstatau prezenti siajn brakojn li malvarme eltiris sian poshorlogon"
+--------------------------------------------------------------------------------
+WER: 0.222222, CER: 0.125000, loss: 29.152788
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_24993228.wav
+ - src: "baldaŭ li iris al berlino kie li ankaŭ pentradis"
+ - res: "mano li iris al berlino kie li ankau pentradis"
+--------------------------------------------------------------------------------
+WER: 0.222222, CER: 0.072727, loss: 28.825478
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27351759.wav
+ - src: "ĉiuj tiuj personoj pri kiuj mi parolis estas volontuloj"
+ - res: "ciuj tiuj personoj el kiuj mi parolis estas volontuloj"
+--------------------------------------------------------------------------------
+WER: 0.222222, CER: 0.038462, loss: 28.590395
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_25566899.wav
+ - src: "la vortoj estas formataj ĉefe per aldono de sufiksoj"
+ - res: "la vortoj estas formitaj cefe per aldono de sufiksoj"
+--------------------------------------------------------------------------------
+Worst WER: 
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.363636, loss: 3.638095
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_20463514.wav
+ - src: "ĉu dolorego"
+ - res: "cu do la rego"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.333333, loss: 3.518136
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27433067.wav
+ - src: "japano"
+ - res: "la pano"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.100000, loss: 3.476832
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27394597.wav
+ - src: "nedankinde"
+ - res: "ne dankinde"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.200000, loss: 2.976520
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27157951.wav
+ - src: "lacas"
+ - res: "la cas"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.125000, loss: 1.141496
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27351660.wav
+ - src: "dufojojn"
+ - res: "du fojojn"
+--------------------------------------------------------------------------------
+
+
+I Loading best validating checkpoint from /content/eo/checkpoints/best_dev-3981911
+I Loading variable from checkpoint: beta1_power
+I Loading variable from checkpoint: beta2_power
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias/Adam
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias/Adam_1
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel/Adam
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel/Adam_1
+I Loading variable from checkpoint: global_step
+I Loading variable from checkpoint: layer_1/bias
+I Loading variable from checkpoint: layer_1/bias/Adam
+I Loading variable from checkpoint: layer_1/bias/Adam_1
+I Loading variable from checkpoint: layer_1/weights
+I Loading variable from checkpoint: layer_1/weights/Adam
+I Loading variable from checkpoint: layer_1/weights/Adam_1
+I Loading variable from checkpoint: layer_2/bias
+I Loading variable from checkpoint: layer_2/bias/Adam
+I Loading variable from checkpoint: layer_2/bias/Adam_1
+I Loading variable from checkpoint: layer_2/weights
+I Loading variable from checkpoint: layer_2/weights/Adam
+I Loading variable from checkpoint: layer_2/weights/Adam_1
+I Loading variable from checkpoint: layer_3/bias
+I Loading variable from checkpoint: layer_3/bias/Adam
+I Loading variable from checkpoint: layer_3/bias/Adam_1
+I Loading variable from checkpoint: layer_3/weights
+I Loading variable from checkpoint: layer_3/weights/Adam
+I Loading variable from checkpoint: layer_3/weights/Adam_1
+I Loading variable from checkpoint: layer_5/bias
+I Loading variable from checkpoint: layer_5/bias/Adam
+I Loading variable from checkpoint: layer_5/bias/Adam_1
+I Loading variable from checkpoint: layer_5/weights
+I Loading variable from checkpoint: layer_5/weights/Adam
+I Loading variable from checkpoint: layer_5/weights/Adam_1
+I Loading variable from checkpoint: layer_6/bias
+I Loading variable from checkpoint: layer_6/bias/Adam
+I Loading variable from checkpoint: layer_6/bias/Adam_1
+I Loading variable from checkpoint: layer_6/weights
+I Loading variable from checkpoint: layer_6/weights/Adam
+I Loading variable from checkpoint: layer_6/weights/Adam_1
+I Loading variable from checkpoint: learning_rate
+I STARTING Optimization
+Epoch 0 |   Training | Elapsed Time: 3:02:01 | Steps: 21202 | Loss: 9.144305   
+Epoch 0 | Validation | Elapsed Time: 0:02:37 | Steps: 898 | Loss: 16.181667 | Dataset: /content/data/content/data/cv-corpus-7/eo/clips/dev.csv
+I Saved new best validating model with loss 16.181667 to: /content/eo/checkpoints/best_dev-4003113
+--------------------------------------------------------------------------------
+Epoch 1 |   Training | Elapsed Time: 3:02:09 | Steps: 21202 | Loss: 8.889680   
+Epoch 1 | Validation | Elapsed Time: 0:02:37 | Steps: 898 | Loss: 15.950589 | Dataset: /content/data/content/data/cv-corpus-7/eo/clips/dev.csv
+I Saved new best validating model with loss 15.950589 to: /content/eo/checkpoints/best_dev-4024315
+--------------------------------------------------------------------------------
+Epoch 2 |   Training | Elapsed Time: 3:02:17 | Steps: 21202 | Loss: 8.631432   
+Epoch 2 | Validation | Elapsed Time: 0:02:35 | Steps: 898 | Loss: 16.005913 | Dataset: /content/data/content/data/cv-corpus-7/eo/clips/dev.csv
+--------------------------------------------------------------------------------
+Epoch 3 |   Training | Elapsed Time: 3:00:24 | Steps: 21202 | Loss: 8.412899   
+Epoch 3 | Validation | Elapsed Time: 0:02:32 | Steps: 898 | Loss: 15.811768 | Dataset: /content/data/content/data/cv-corpus-7/eo/clips/dev.csv
+I Saved new best validating model with loss 15.811768 to: /content/eo/checkpoints/best_dev-4066719
+--------------------------------------------------------------------------------
+Epoch 4 |   Training | Elapsed Time: 3:01:15 | Steps: 21202 | Loss: 8.210697   
+Epoch 4 | Validation | Elapsed Time: 0:02:37 | Steps: 898 | Loss: 15.749591 | Dataset: /content/data/content/data/cv-corpus-7/eo/clips/dev.csv
+I Saved new best validating model with loss 15.749591 to: /content/eo/checkpoints/best_dev-4087921
+--------------------------------------------------------------------------------
+I FINISHED optimization in 15:21:25.494344
+I Loading best validating checkpoint from /content/eo/checkpoints/best_dev-4087921
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel
+I Loading variable from checkpoint: global_step
+I Loading variable from checkpoint: layer_1/bias
+I Loading variable from checkpoint: layer_1/weights
+I Loading variable from checkpoint: layer_2/bias
+I Loading variable from checkpoint: layer_2/weights
+I Loading variable from checkpoint: layer_3/bias
+I Loading variable from checkpoint: layer_3/weights
+I Loading variable from checkpoint: layer_5/bias
+I Loading variable from checkpoint: layer_5/weights
+I Loading variable from checkpoint: layer_6/bias
+I Loading variable from checkpoint: layer_6/weights
+Testing model on /content/data/content/data/cv-corpus-7/eo/clips/test.csv
+Test epoch | Steps: 895 | Elapsed Time: 0:16:46                                
+Test on /content/data/content/data/cv-corpus-7/eo/clips/test.csv - WER: 0.250161, CER: 0.079975, loss: 18.056248
+--------------------------------------------------------------------------------
+Best WER: 
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 47.078255
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_20556833.wav
+ - src: "diplomito de matematika fakultato de varsovia universitato"
+ - res: "diplomito de matematika fakultato de varsovia universitato"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 44.338036
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_25650427.wav
+ - src: "respondo okazis eventoj kiujn mi plenforte malaprobas"
+ - res: "respondo okazis eventoj kiujn mi plenforte malaprobas"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 44.116249
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_20686293.wav
+ - src: "ekzemploj estas la teorioj de klasika mekaniko relativeco kaj kvantuma mekaniko"
+ - res: "ekzemploj estas la teorioj de klasika mekaniko relativeco kaj kvantuma mekaniko"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 42.547401
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_18355736.wav
+ - src: "vi eraras sinjoro respondis la junulo"
+ - res: "vi eraras sinjoro respondis la junulo"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 40.420151
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_18533257.wav
+ - src: "donaco nesincera estas donaco infera"
+ - res: "donaco nesincera estas donaco infera"
+--------------------------------------------------------------------------------
+Median WER: 
+--------------------------------------------------------------------------------
+WER: 0.214286, CER: 0.056338, loss: 23.203417
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_20637358.wav
+ - src: "ĉi tiu parto de la membro estas speciale uzata por teni kaj preni aĵojn"
+ - res: "ci tiu parto de la membroj estas speciale uzata por teni kaj preni agoj"
+--------------------------------------------------------------------------------
+WER: 0.214286, CER: 0.052632, loss: 23.052179
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_20473829.wav
+ - src: "mi alproksimiĝis kaj ekvidis ke la strio tute malaperis kaj mi ĝojis pro tio"
+ - res: "mia proksimigis kaj ekvidis ke la strio tute malaperis kaj mi gojis pro tio"
+--------------------------------------------------------------------------------
+WER: 0.214286, CER: 0.054348, loss: 22.676514
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_26958846.wav
+ - src: "la revuo monato kaj almenaŭ unu eldonejo decidis donaci al la esperantistoj senpagan legaĵon"
+ - res: "la revuo monato kaj almenau unu eldonejo decidis lanci al la esperantistoj senpagan legadon"
+--------------------------------------------------------------------------------
+WER: 0.214286, CER: 0.032967, loss: 22.004599
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_20600584.wav
+ - src: "ĝi estas la institucio kiu okupiĝas mondskale pri la teknikaj aspektoj de la telekomunikado"
+ - res: "gi estas la institucio kiu okupigas monskale pri la teknikaj aspektoj de la telekomunikado"
+--------------------------------------------------------------------------------
+WER: 0.214286, CER: 0.077922, loss: 21.855772
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_22420834.wav
+ - src: "la masklo helpas en idozorgado ĝis ekflugo de idoj kio okazas post du monatoj"
+ - res: "la masko helpas en izolado gis ekflugo de idoj kio okazas post du monatoj"
+--------------------------------------------------------------------------------
+Worst WER: 
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.333333, loss: 4.220545
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27433067.wav
+ - src: "japano"
+ - res: "la pano"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.363636, loss: 3.907278
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_20463514.wav
+ - src: "ĉu dolorego"
+ - res: "cu do la rego"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.100000, loss: 2.909134
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27394597.wav
+ - src: "nedankinde"
+ - res: "ne dankinde"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.600000, loss: 2.847345
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27157951.wav
+ - src: "lacas"
+ - res: "la ce"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.125000, loss: 0.766666
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27351660.wav
+ - src: "dufojojn"
+ - res: "du fojojn"
+--------------------------------------------------------------------------------
+
+
+20-22
+Batch size = 4
+
+I Loading best validating checkpoint from /content/eo/checkpoints/best_dev-4087921
+I Vars to load: ['beta1_power', 'beta2_power', 'cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias', 'cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias/Adam', 'cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias/Adam_1', 'cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel', 'cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel/Adam', 'cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel/Adam_1', 'global_step', 'layer_1/bias', 'layer_1/bias/Adam', 'layer_1/bias/Adam_1', 'layer_1/weights', 'layer_1/weights/Adam', 'layer_1/weights/Adam_1', 'layer_2/bias', 'layer_2/bias/Adam', 'layer_2/bias/Adam_1', 'layer_2/weights', 'layer_2/weights/Adam', 'layer_2/weights/Adam_1', 'layer_3/bias', 'layer_3/bias/Adam', 'layer_3/bias/Adam_1', 'layer_3/weights', 'layer_3/weights/Adam', 'layer_3/weights/Adam_1', 'layer_5/bias', 'layer_5/bias/Adam', 'layer_5/bias/Adam_1', 'layer_5/weights', 'layer_5/weights/Adam', 'layer_5/weights/Adam_1', 'layer_6/bias', 'layer_6/bias/Adam', 'layer_6/bias/Adam_1', 'layer_6/weights', 'layer_6/weights/Adam', 'layer_6/weights/Adam_1', 'learning_rate']
+I Getting tensor from variable: beta1_power
+I Loading tensor from checkpoint: beta1_power
+I Getting tensor from variable: beta2_power
+I Loading tensor from checkpoint: beta2_power
+I Getting tensor from variable: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias
+I Loading tensor from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias
+I Getting tensor from variable: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias/Adam
+I Loading tensor from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias/Adam
+I Getting tensor from variable: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias/Adam_1
+I Loading tensor from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias/Adam_1
+I Getting tensor from variable: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel
+I Loading tensor from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel
+I Getting tensor from variable: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel/Adam
+I Loading tensor from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel/Adam
+I Getting tensor from variable: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel/Adam_1
+I Loading tensor from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel/Adam_1
+I Getting tensor from variable: global_step
+I Loading tensor from checkpoint: global_step
+I Getting tensor from variable: layer_1/bias
+I Loading tensor from checkpoint: layer_1/bias
+I Getting tensor from variable: layer_1/bias/Adam
+I Loading tensor from checkpoint: layer_1/bias/Adam
+I Getting tensor from variable: layer_1/bias/Adam_1
+I Loading tensor from checkpoint: layer_1/bias/Adam_1
+I Getting tensor from variable: layer_1/weights
+I Loading tensor from checkpoint: layer_1/weights
+I Getting tensor from variable: layer_1/weights/Adam
+I Loading tensor from checkpoint: layer_1/weights/Adam
+I Getting tensor from variable: layer_1/weights/Adam_1
+I Loading tensor from checkpoint: layer_1/weights/Adam_1
+I Getting tensor from variable: layer_2/bias
+I Loading tensor from checkpoint: layer_2/bias
+I Getting tensor from variable: layer_2/bias/Adam
+I Loading tensor from checkpoint: layer_2/bias/Adam
+I Getting tensor from variable: layer_2/bias/Adam_1
+I Loading tensor from checkpoint: layer_2/bias/Adam_1
+I Getting tensor from variable: layer_2/weights
+I Loading tensor from checkpoint: layer_2/weights
+I Getting tensor from variable: layer_2/weights/Adam
+I Loading tensor from checkpoint: layer_2/weights/Adam
+I Getting tensor from variable: layer_2/weights/Adam_1
+I Loading tensor from checkpoint: layer_2/weights/Adam_1
+I Getting tensor from variable: layer_3/bias
+I Loading tensor from checkpoint: layer_3/bias
+I Getting tensor from variable: layer_3/bias/Adam
+I Loading tensor from checkpoint: layer_3/bias/Adam
+I Getting tensor from variable: layer_3/bias/Adam_1
+I Loading tensor from checkpoint: layer_3/bias/Adam_1
+I Getting tensor from variable: layer_3/weights
+I Loading tensor from checkpoint: layer_3/weights
+I Getting tensor from variable: layer_3/weights/Adam
+I Loading tensor from checkpoint: layer_3/weights/Adam
+I Getting tensor from variable: layer_3/weights/Adam_1
+I Loading tensor from checkpoint: layer_3/weights/Adam_1
+I Getting tensor from variable: layer_5/bias
+I Loading tensor from checkpoint: layer_5/bias
+I Getting tensor from variable: layer_5/bias/Adam
+I Loading tensor from checkpoint: layer_5/bias/Adam
+I Getting tensor from variable: layer_5/bias/Adam_1
+I Loading tensor from checkpoint: layer_5/bias/Adam_1
+I Getting tensor from variable: layer_5/weights
+I Loading tensor from checkpoint: layer_5/weights
+I Getting tensor from variable: layer_5/weights/Adam
+I Loading tensor from checkpoint: layer_5/weights/Adam
+I Getting tensor from variable: layer_5/weights/Adam_1
+I Loading tensor from checkpoint: layer_5/weights/Adam_1
+I Getting tensor from variable: layer_6/bias
+I Loading tensor from checkpoint: layer_6/bias
+I Getting tensor from variable: layer_6/bias/Adam
+I Loading tensor from checkpoint: layer_6/bias/Adam
+I Getting tensor from variable: layer_6/bias/Adam_1
+I Loading tensor from checkpoint: layer_6/bias/Adam_1
+I Getting tensor from variable: layer_6/weights
+I Loading tensor from checkpoint: layer_6/weights
+I Getting tensor from variable: layer_6/weights/Adam
+I Loading tensor from checkpoint: layer_6/weights/Adam
+I Getting tensor from variable: layer_6/weights/Adam_1
+I Loading tensor from checkpoint: layer_6/weights/Adam_1
+I Getting tensor from variable: learning_rate
+I Loading tensor from checkpoint: learning_rate
+I STARTING Optimization
+Epoch 0 |   Training | Elapsed Time: 5:20:44 | Steps: 42404 | Loss: 8.744682   
+Epoch 0 | Validation | Elapsed Time: 0:03:54 | Steps: 1796 | Loss: 15.344537 | Dataset: /content/data/content/data/cv-corpus-7/eo/clips/dev.csv
+I Saved new best validating model with loss 15.344537 to: /content/eo/checkpoints/best_dev-4130325
+--------------------------------------------------------------------------------
+Epoch 1 |   Training | Elapsed Time: 5:20:27 | Steps: 42404 | Loss: 8.499578   
+Epoch 1 | Validation | Elapsed Time: 0:03:54 | Steps: 1796 | Loss: 15.217653 | Dataset: /content/data/content/data/cv-corpus-7/eo/clips/dev.csv
+I Saved new best validating model with loss 15.217653 to: /content/eo/checkpoints/best_dev-4172729
+--------------------------------------------------------------------------------
+I FINISHED optimization in 10:49:07.324009
+I Loading best validating checkpoint from /content/eo/checkpoints/best_dev-4172729
+I Vars to load: ['cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias', 'cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel', 'global_step', 'layer_1/bias', 'layer_1/weights', 'layer_2/bias', 'layer_2/weights', 'layer_3/bias', 'layer_3/weights', 'layer_5/bias', 'layer_5/weights', 'layer_6/bias', 'layer_6/weights']
+I Getting tensor from variable: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias
+I Loading tensor from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias
+I Getting tensor from variable: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel
+I Loading tensor from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel
+I Getting tensor from variable: global_step
+I Loading tensor from checkpoint: global_step
+I Getting tensor from variable: layer_1/bias
+I Loading tensor from checkpoint: layer_1/bias
+I Getting tensor from variable: layer_1/weights
+I Loading tensor from checkpoint: layer_1/weights
+I Getting tensor from variable: layer_2/bias
+I Loading tensor from checkpoint: layer_2/bias
+I Getting tensor from variable: layer_2/weights
+I Loading tensor from checkpoint: layer_2/weights
+I Getting tensor from variable: layer_3/bias
+I Loading tensor from checkpoint: layer_3/bias
+I Getting tensor from variable: layer_3/weights
+I Loading tensor from checkpoint: layer_3/weights
+I Getting tensor from variable: layer_5/bias
+I Loading tensor from checkpoint: layer_5/bias
+I Getting tensor from variable: layer_5/weights
+I Loading tensor from checkpoint: layer_5/weights
+I Getting tensor from variable: layer_6/bias
+I Loading tensor from checkpoint: layer_6/bias
+I Getting tensor from variable: layer_6/weights
+I Loading tensor from checkpoint: layer_6/weights
+Testing model on /content/data/content/data/cv-corpus-7/eo/clips/test.csv
+Test epoch | Steps: 1789 | Elapsed Time: 0:17:05                               
+Test on /content/data/content/data/cv-corpus-7/eo/clips/test.csv - WER: 0.249525, CER: 0.079401, loss: 17.604393
+--------------------------------------------------------------------------------
+Best WER: 
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 47.710922
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_21512763.wav
+ - src: "post falo de sovetunio aperis multaj novaj fakaj elementoj de la tutrusia olimpiko"
+ - res: "post falo de sovetunio aperis multaj novaj fakaj elementoj de la tutrusia olimpiko"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 47.462936
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_20556833.wav
+ - src: "diplomito de matematika fakultato de varsovia universitato"
+ - res: "diplomito de matematika fakultato de varsovia universitato"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 42.768806
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_20686293.wav
+ - src: "ekzemploj estas la teorioj de klasika mekaniko relativeco kaj kvantuma mekaniko"
+ - res: "ekzemploj estas la teorioj de klasika mekaniko relativeco kaj kvantuma mekaniko"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 42.050728
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_18533257.wav
+ - src: "donaco nesincera estas donaco infera"
+ - res: "donaco nesincera estas donaco infera"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 41.781017
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_18355736.wav
+ - src: "vi eraras sinjoro respondis la junulo"
+ - res: "vi eraras sinjoro respondis la junulo"
+--------------------------------------------------------------------------------
+Median WER: 
+--------------------------------------------------------------------------------
+WER: 0.214286, CER: 0.081081, loss: 24.396795
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_20519089.wav
+ - src: "en ilia lumo klaro ekvidis ke lia sulko inter la brovoj estis tre profunda"
+ - res: "en ilia lumo klaro ekvidis ke lia sulkante la provo estis tre profunda"
+--------------------------------------------------------------------------------
+WER: 0.214286, CER: 0.048193, loss: 24.020048
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27244040.wav
+ - src: "krom la direktoroj al ĝi apartenis ankaŭ la prezidantoj de al landaj centraj bankoj"
+ - res: "krom la direktoroj al li apartenis ankau la prezidantoj de la landaj centraj bankoj"
+--------------------------------------------------------------------------------
+WER: 0.214286, CER: 0.050633, loss: 24.012205
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_19668329.wav
+ - src: "laŭeble mi metis la kestojn kaj tabulojn ĉirkaŭ mi kiu faris ian budon pornokte"
+ - res: "laueble mi metis la kestojn kaj tabulojn cirkau mi kiu faris iam budon pornokte"
+--------------------------------------------------------------------------------
+WER: 0.214286, CER: 0.092308, loss: 23.742495
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27236765.wav
+ - src: "la pastro iras preĝi al la preĝejo kaj lasas la bebon en la korto"
+ - res: "la pastro iras pri tia la pregejo kaj lasas la bebon en la korto"
+--------------------------------------------------------------------------------
+WER: 0.214286, CER: 0.031915, loss: 23.606882
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27296995.wav
+ - src: "li daŭre partoprenis al la disvastigo de astronomiaj aktivecoj por infanoj kaj lokaj civitanoj"
+ - res: "ni daure partoprenis al la disvastigo de astronomia aktivecoj por infanoj kaj lokaj civitanoj"
+--------------------------------------------------------------------------------
+Worst WER: 
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.333333, loss: 4.316694
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27433067.wav
+ - src: "japano"
+ - res: "la pano"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.600000, loss: 3.665412
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27157951.wav
+ - src: "lacas"
+ - res: "la ce"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.363636, loss: 3.653360
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_20463514.wav
+ - src: "ĉu dolorego"
+ - res: "cu do la rego"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.100000, loss: 3.289932
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27394597.wav
+ - src: "nedankinde"
+ - res: "ne dankinde"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.125000, loss: 0.640852
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27351660.wav
+ - src: "dufojojn"
+ - res: "du fojojn"
+--------------------------------------------------------------------------------
+
+
+22-24 batch size 8
+
+I Loading best validating checkpoint from /content/eo/checkpoints/best_dev-4172729
+I Loading variable from checkpoint: beta1_power
+I Loading variable from checkpoint: beta2_power
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias/Adam
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias/Adam_1
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel/Adam
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel/Adam_1
+I Loading variable from checkpoint: global_step
+I Loading variable from checkpoint: layer_1/bias
+I Loading variable from checkpoint: layer_1/bias/Adam
+I Loading variable from checkpoint: layer_1/bias/Adam_1
+I Loading variable from checkpoint: layer_1/weights
+I Loading variable from checkpoint: layer_1/weights/Adam
+I Loading variable from checkpoint: layer_1/weights/Adam_1
+I Loading variable from checkpoint: layer_2/bias
+I Loading variable from checkpoint: layer_2/bias/Adam
+I Loading variable from checkpoint: layer_2/bias/Adam_1
+I Loading variable from checkpoint: layer_2/weights
+I Loading variable from checkpoint: layer_2/weights/Adam
+I Loading variable from checkpoint: layer_2/weights/Adam_1
+I Loading variable from checkpoint: layer_3/bias
+I Loading variable from checkpoint: layer_3/bias/Adam
+I Loading variable from checkpoint: layer_3/bias/Adam_1
+I Loading variable from checkpoint: layer_3/weights
+I Loading variable from checkpoint: layer_3/weights/Adam
+I Loading variable from checkpoint: layer_3/weights/Adam_1
+I Loading variable from checkpoint: layer_5/bias
+I Loading variable from checkpoint: layer_5/bias/Adam
+I Loading variable from checkpoint: layer_5/bias/Adam_1
+I Loading variable from checkpoint: layer_5/weights
+I Loading variable from checkpoint: layer_5/weights/Adam
+I Loading variable from checkpoint: layer_5/weights/Adam_1
+I Loading variable from checkpoint: layer_6/bias
+I Loading variable from checkpoint: layer_6/bias/Adam
+I Loading variable from checkpoint: layer_6/bias/Adam_1
+I Loading variable from checkpoint: layer_6/weights
+I Loading variable from checkpoint: layer_6/weights/Adam
+I Loading variable from checkpoint: layer_6/weights/Adam_1
+I Loading variable from checkpoint: learning_rate
+I STARTING Optimization
+Epoch 0 |   Training | Elapsed Time: 5:22:14 | Steps: 42404 | Loss: 7.834136   
+Epoch 0 | Validation | Elapsed Time: 0:03:56 | Steps: 1796 | Loss: 15.231110 | Dataset: /content/data/content/data/cv-corpus-7/eo/clips/dev.csv
+I Saved new best validating model with loss 15.231110 to: /content/eo/checkpoints/best_dev-4215133
+--------------------------------------------------------------------------------
+Epoch 1 |   Training | Elapsed Time: 5:21:47 | Steps: 42404 | Loss: 7.646902   
+Epoch 1 | Validation | Elapsed Time: 0:03:55 | Steps: 1796 | Loss: 15.166678 | Dataset: /content/data/content/data/cv-corpus-7/eo/clips/dev.csv
+I Saved new best validating model with loss 15.166678 to: /content/eo/checkpoints/best_dev-4257537
+--------------------------------------------------------------------------------
+I FINISHED optimization in 10:52:01.190235
+I Loading best validating checkpoint from /content/eo/checkpoints/best_dev-4257537
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias
+I Loading variable from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel
+I Loading variable from checkpoint: global_step
+I Loading variable from checkpoint: layer_1/bias
+I Loading variable from checkpoint: layer_1/weights
+I Loading variable from checkpoint: layer_2/bias
+I Loading variable from checkpoint: layer_2/weights
+I Loading variable from checkpoint: layer_3/bias
+I Loading variable from checkpoint: layer_3/weights
+I Loading variable from checkpoint: layer_5/bias
+I Loading variable from checkpoint: layer_5/weights
+I Loading variable from checkpoint: layer_6/bias
+I Loading variable from checkpoint: layer_6/weights
+Testing model on /content/data/content/data/cv-corpus-7/eo/clips/test.csv
+Test epoch | Steps: 1789 | Elapsed Time: 0:17:19                               
+Test on /content/data/content/data/cv-corpus-7/eo/clips/test.csv - WER: 0.248226, CER: 0.079109, loss: 17.539305
+--------------------------------------------------------------------------------
+Best WER: 
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 48.053185
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_21512763.wav
+ - src: "post falo de sovetunio aperis multaj novaj fakaj elementoj de la tutrusia olimpiko"
+ - res: "post falo de sovetunio aperis multaj novaj fakaj elementoj de la tutrusia olimpiko"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 45.286411
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_20556833.wav
+ - src: "diplomito de matematika fakultato de varsovia universitato"
+ - res: "diplomito de matematika fakultato de varsovia universitato"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 42.956425
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_18355736.wav
+ - src: "vi eraras sinjoro respondis la junulo"
+ - res: "vi eraras sinjoro respondis la junulo"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 41.691814
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_20686293.wav
+ - src: "ekzemploj estas la teorioj de klasika mekaniko relativeco kaj kvantuma mekaniko"
+ - res: "ekzemploj estas la teorioj de klasika mekaniko relativeco kaj kvantuma mekaniko"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 41.368019
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_18533257.wav
+ - src: "donaco nesincera estas donaco infera"
+ - res: "donaco nesincera estas donaco infera"
+--------------------------------------------------------------------------------
+Median WER: 
+--------------------------------------------------------------------------------
+WER: 0.214286, CER: 0.040541, loss: 36.803154
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_25179910.wav
+ - src: "litove oni ŝercas ke litovojn kaj paserojn oni povas trovi ĉie en la mondo"
+ - res: "litove oni sercas ke litovojn kaj paserojn oni povis trovi cie en la mondo"
+--------------------------------------------------------------------------------
+WER: 0.214286, CER: 0.081081, loss: 36.451370
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27242043.wav
+ - src: "li estis sepultita en la kripto de la preĝejo de sankta mikaelo en munkeno"
+ - res: "ili estis enportita en la kripto de la pregejo de sankta mikaelo en munkeno"
+--------------------------------------------------------------------------------
+WER: 0.214286, CER: 0.102564, loss: 35.171539
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_26642573.wav
+ - src: "same en la libera urbo dancigo estis en la pola administracio ankaŭ la fervojo"
+ - res: "same en la libera urbo dancigo estis en la pola astra tio ankau la fervojo"
+--------------------------------------------------------------------------------
+WER: 0.214286, CER: 0.109589, loss: 34.792751
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_20600546.wav
+ - src: "krome la ordo ankaŭ volas plibonigi la pozicion de la virinoj en la socio"
+ - res: "home la banka volas plibonigi la pozicion de la virinoj en la socio"
+--------------------------------------------------------------------------------
+WER: 0.214286, CER: 0.063158, loss: 34.640388
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27399918.wav
+ - src: "interne tuj estas videblaj lignaj skulptaĵoj pri sankta johano la evangeliisto kaj sankta maria"
+ - res: "interna tuj estas videblaj lignaj skulptajoj pri sankta johano la ranglisto kaj sankta maria"
+--------------------------------------------------------------------------------
+Worst WER: 
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.363636, loss: 4.178782
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_20463514.wav
+ - src: "ĉu dolorego"
+ - res: "cu do la rego"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.200000, loss: 3.917273
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27157951.wav
+ - src: "lacas"
+ - res: "la cas"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.100000, loss: 2.489083
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27394597.wav
+ - src: "nedankinde"
+ - res: "ne dankinde"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.111111, loss: 0.578192
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_26649034.wav
+ - src: "hejmtasko"
+ - res: "hejm tasko"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.125000, loss: 0.407307
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27351660.wav
+ - src: "dufojojn"
+ - res: "du fojojn"
+--------------------------------------------------------------------------------
+
+
+Epoch 25: batch size= 4
+
+I Loading best validating checkpoint from /content/eo/checkpoints/best_dev-4257537
+I Vars to load: ['beta1_power', 'beta2_power', 'cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias', 'cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias/Adam', 'cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias/Adam_1', 'cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel', 'cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel/Adam', 'cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel/Adam_1', 'global_step', 'layer_1/bias', 'layer_1/bias/Adam', 'layer_1/bias/Adam_1', 'layer_1/weights', 'layer_1/weights/Adam', 'layer_1/weights/Adam_1', 'layer_2/bias', 'layer_2/bias/Adam', 'layer_2/bias/Adam_1', 'layer_2/weights', 'layer_2/weights/Adam', 'layer_2/weights/Adam_1', 'layer_3/bias', 'layer_3/bias/Adam', 'layer_3/bias/Adam_1', 'layer_3/weights', 'layer_3/weights/Adam', 'layer_3/weights/Adam_1', 'layer_5/bias', 'layer_5/bias/Adam', 'layer_5/bias/Adam_1', 'layer_5/weights', 'layer_5/weights/Adam', 'layer_5/weights/Adam_1', 'layer_6/bias', 'layer_6/bias/Adam', 'layer_6/bias/Adam_1', 'layer_6/weights', 'layer_6/weights/Adam', 'layer_6/weights/Adam_1', 'learning_rate']
+I Getting tensor from variable: beta1_power
+I Loading tensor from checkpoint: beta1_power
+I Getting tensor from variable: beta2_power
+I Loading tensor from checkpoint: beta2_power
+I Getting tensor from variable: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias
+I Loading tensor from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias
+I Getting tensor from variable: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias/Adam
+I Loading tensor from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias/Adam
+I Getting tensor from variable: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias/Adam_1
+I Loading tensor from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias/Adam_1
+I Getting tensor from variable: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel
+I Loading tensor from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel
+I Getting tensor from variable: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel/Adam
+I Loading tensor from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel/Adam
+I Getting tensor from variable: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel/Adam_1
+I Loading tensor from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel/Adam_1
+I Getting tensor from variable: global_step
+I Loading tensor from checkpoint: global_step
+I Getting tensor from variable: layer_1/bias
+I Loading tensor from checkpoint: layer_1/bias
+I Getting tensor from variable: layer_1/bias/Adam
+I Loading tensor from checkpoint: layer_1/bias/Adam
+I Getting tensor from variable: layer_1/bias/Adam_1
+I Loading tensor from checkpoint: layer_1/bias/Adam_1
+I Getting tensor from variable: layer_1/weights
+I Loading tensor from checkpoint: layer_1/weights
+I Getting tensor from variable: layer_1/weights/Adam
+I Loading tensor from checkpoint: layer_1/weights/Adam
+I Getting tensor from variable: layer_1/weights/Adam_1
+I Loading tensor from checkpoint: layer_1/weights/Adam_1
+I Getting tensor from variable: layer_2/bias
+I Loading tensor from checkpoint: layer_2/bias
+I Getting tensor from variable: layer_2/bias/Adam
+I Loading tensor from checkpoint: layer_2/bias/Adam
+I Getting tensor from variable: layer_2/bias/Adam_1
+I Loading tensor from checkpoint: layer_2/bias/Adam_1
+I Getting tensor from variable: layer_2/weights
+I Loading tensor from checkpoint: layer_2/weights
+I Getting tensor from variable: layer_2/weights/Adam
+I Loading tensor from checkpoint: layer_2/weights/Adam
+I Getting tensor from variable: layer_2/weights/Adam_1
+I Loading tensor from checkpoint: layer_2/weights/Adam_1
+I Getting tensor from variable: layer_3/bias
+I Loading tensor from checkpoint: layer_3/bias
+I Getting tensor from variable: layer_3/bias/Adam
+I Loading tensor from checkpoint: layer_3/bias/Adam
+I Getting tensor from variable: layer_3/bias/Adam_1
+I Loading tensor from checkpoint: layer_3/bias/Adam_1
+I Getting tensor from variable: layer_3/weights
+I Loading tensor from checkpoint: layer_3/weights
+I Getting tensor from variable: layer_3/weights/Adam
+I Loading tensor from checkpoint: layer_3/weights/Adam
+I Getting tensor from variable: layer_3/weights/Adam_1
+I Loading tensor from checkpoint: layer_3/weights/Adam_1
+I Getting tensor from variable: layer_5/bias
+I Loading tensor from checkpoint: layer_5/bias
+I Getting tensor from variable: layer_5/bias/Adam
+I Loading tensor from checkpoint: layer_5/bias/Adam
+I Getting tensor from variable: layer_5/bias/Adam_1
+I Loading tensor from checkpoint: layer_5/bias/Adam_1
+I Getting tensor from variable: layer_5/weights
+I Loading tensor from checkpoint: layer_5/weights
+I Getting tensor from variable: layer_5/weights/Adam
+I Loading tensor from checkpoint: layer_5/weights/Adam
+I Getting tensor from variable: layer_5/weights/Adam_1
+I Loading tensor from checkpoint: layer_5/weights/Adam_1
+I Getting tensor from variable: layer_6/bias
+I Loading tensor from checkpoint: layer_6/bias
+I Getting tensor from variable: layer_6/bias/Adam
+I Loading tensor from checkpoint: layer_6/bias/Adam
+I Getting tensor from variable: layer_6/bias/Adam_1
+I Loading tensor from checkpoint: layer_6/bias/Adam_1
+I Getting tensor from variable: layer_6/weights
+I Loading tensor from checkpoint: layer_6/weights
+I Getting tensor from variable: layer_6/weights/Adam
+I Loading tensor from checkpoint: layer_6/weights/Adam
+I Getting tensor from variable: layer_6/weights/Adam_1
+I Loading tensor from checkpoint: layer_6/weights/Adam_1
+I Getting tensor from variable: learning_rate
+I Loading tensor from checkpoint: learning_rate
+I STARTING Optimization
+Epoch 0 |   Training | Elapsed Time: 9:45:24 | Steps: 84808 | Loss: 7.972107   
+Epoch 0 | Validation | Elapsed Time: 0:06:30 | Steps: 3592 | Loss: 14.896624 | Dataset: /content/data/content/data/cv-corpus-7/eo/clips/dev.csv
+I Saved new best validating model with loss 14.896624 to: /content/eo/checkpoints/best_dev-4342345
+--------------------------------------------------------------------------------
+I FINISHED optimization in 9:51:58.436885
+I Loading best validating checkpoint from /content/eo/checkpoints/best_dev-4342345
+I Vars to load: ['cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias', 'cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel', 'global_step', 'layer_1/bias', 'layer_1/weights', 'layer_2/bias', 'layer_2/weights', 'layer_3/bias', 'layer_3/weights', 'layer_5/bias', 'layer_5/weights', 'layer_6/bias', 'layer_6/weights']
+I Getting tensor from variable: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias
+I Loading tensor from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/bias
+I Getting tensor from variable: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel
+I Loading tensor from checkpoint: cudnn_lstm/rnn/multi_rnn_cell/cell_0/cudnn_compatible_lstm_cell/kernel
+I Getting tensor from variable: global_step
+I Loading tensor from checkpoint: global_step
+I Getting tensor from variable: layer_1/bias
+I Loading tensor from checkpoint: layer_1/bias
+I Getting tensor from variable: layer_1/weights
+I Loading tensor from checkpoint: layer_1/weights
+I Getting tensor from variable: layer_2/bias
+I Loading tensor from checkpoint: layer_2/bias
+I Getting tensor from variable: layer_2/weights
+I Loading tensor from checkpoint: layer_2/weights
+I Getting tensor from variable: layer_3/bias
+I Loading tensor from checkpoint: layer_3/bias
+I Getting tensor from variable: layer_3/weights
+I Loading tensor from checkpoint: layer_3/weights
+I Getting tensor from variable: layer_5/bias
+I Loading tensor from checkpoint: layer_5/bias
+I Getting tensor from variable: layer_5/weights
+I Loading tensor from checkpoint: layer_5/weights
+I Getting tensor from variable: layer_6/bias
+I Loading tensor from checkpoint: layer_6/bias
+I Getting tensor from variable: layer_6/weights
+I Loading tensor from checkpoint: layer_6/weights
+Testing model on /content/data/content/data/cv-corpus-7/eo/clips/test.csv
+Test epoch | Steps: 3577 | Elapsed Time: 0:19:54                               
+Test on /content/data/content/data/cv-corpus-7/eo/clips/test.csv - WER: 0.247917, CER: 0.079123, loss: 17.417385
+--------------------------------------------------------------------------------
+Best WER: 
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 58.111694
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_25239419.wav
+ - src: "kiam invadis la landon pluraj armeoj kabila deklaris la atakon tutsia komploto"
+ - res: "kiam invadis la landon pluraj armeoj kabila deklaris la atakon tutsia komploto"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 49.807575
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_21512763.wav
+ - src: "post falo de sovetunio aperis multaj novaj fakaj elementoj de la tutrusia olimpiko"
+ - res: "post falo de sovetunio aperis multaj novaj fakaj elementoj de la tutrusia olimpiko"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 43.692604
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_22198076.wav
+ - src: "li estis diplomita de la universitato de karolo de prago"
+ - res: "li estis diplomita de la universitato de karolo de prago"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 43.561245
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_25650427.wav
+ - src: "respondo okazis eventoj kiujn mi plenforte malaprobas"
+ - res: "respondo okazis eventoj kiujn mi plenforte malaprobas"
+--------------------------------------------------------------------------------
+WER: 0.000000, CER: 0.000000, loss: 42.891827
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_20686293.wav
+ - src: "ekzemploj estas la teorioj de klasika mekaniko relativeco kaj kvantuma mekaniko"
+ - res: "ekzemploj estas la teorioj de klasika mekaniko relativeco kaj kvantuma mekaniko"
+--------------------------------------------------------------------------------
+Median WER: 
+--------------------------------------------------------------------------------
+WER: 0.200000, CER: 0.037037, loss: 0.122477
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27359239.wav
+ - src: "ŝajnas ke li tute malaperis"
+ - res: "sajnas ke li tute malaperis"
+--------------------------------------------------------------------------------
+WER: 0.200000, CER: 0.055556, loss: 0.112343
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27328628.wav
+ - src: "li ne estas ĉi tie"
+ - res: "li ne estas ci tie"
+--------------------------------------------------------------------------------
+WER: 0.200000, CER: 0.047619, loss: 0.105121
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27358495.wav
+ - src: "do nun mi devas manĝi"
+ - res: "do nun mi devas mangi"
+--------------------------------------------------------------------------------
+WER: 0.200000, CER: 0.034483, loss: 0.095811
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_19431504.wav
+ - src: "malaperis kiel ŝtono en maron"
+ - res: "malaperis kiel stono en maron"
+--------------------------------------------------------------------------------
+WER: 0.200000, CER: 0.052632, loss: 0.076650
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_18392405.wav
+ - src: "ĉu vere li estas li"
+ - res: "cu vere li estas li"
+--------------------------------------------------------------------------------
+Worst WER: 
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.200000, loss: 4.665084
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_25972753.wav
+ - src: "nitro"
+ - res: "ni tro"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.200000, loss: 3.993115
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27157951.wav
+ - src: "lacas"
+ - res: "la cas"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.363636, loss: 3.520188
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_20463514.wav
+ - src: "ĉu dolorego"
+ - res: "cu do la rego"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.100000, loss: 2.474876
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27394597.wav
+ - src: "nedankinde"
+ - res: "ne dankinde"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 0.125000, loss: 0.401965
+ - wav: file:///content/data/content/data/cv-corpus-7/eo/clips/common_voice_eo_27351660.wav
+ - src: "dufojojn"
+ - res: "du fojojn"
+--------------------------------------------------------------------------------
+
+
+

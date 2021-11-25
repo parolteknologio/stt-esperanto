@@ -11,6 +11,7 @@ Usefull text sources - Utilaj tekstaj fontoj:
 * The C4 Multilingual Dataset (2 GB) https://github.com/allenai/allennlp/discussions/5265 
 * Common Voice Sentences (>170 000 sentences) https://github.com/common-voice/common-voice/tree/main/server/data/eo
 * Tatoeba https://tatoeba.org/downloads
+* Tekstaro https://tekstaro.com/elshuti.html
 * Esperanto Wikpedia + Wikisources
 
 Tools:

@@ -1,4 +1,8 @@
 # Esperanto STT
+* [Scorer](https://github.com/parolteknologio/stt-esperanto/tree/master/scorer) KenLM Scorer in Esperanto
+* [Deepspeech/Coqui AI models](https://github.com/parolteknologio/stt-esperanto/tree/master/deepspeech-coqui) - find and Download .tflite models
+* [Colab Notebooks](https://github.com/parolteknologio/stt-esperanto/tree/master/colab-notebooks)
+
 Using deepspeech/coqui ai and the common voice dataset
 * https://github.com/coqui-ai/STT
 * https://stt.readthedocs.io/en/latest/
@@ -17,11 +21,8 @@ Using deepspeech/coqui ai and the common voice dataset
 
 |datumaro|parametroj|GPU|rezultoj|
 |--|--|--|--|
-|eo_41h_2019-12-10|python3 DeepSpeech.py --train_files ../eo/clips/train.csv --dev_files ../eo/clips/dev.csv --test_files ../eo/clips/test.csv --automatic_mixed_precision --train_batch_size 16|2 x 1080 Ti 32Gb RAM (leadertelecom)|Time for one Epoch: 3h <br> Total Epochs:3 <br> unfinished, missing epochs parameter |
+|eo_41h_2019-12-10|?|2 x 1080 Ti 32Gb RAM (leadertelecom)| WER 0.5|
 |eo_844h_2021-07-21|english checkpoints, n_depth 2048, dropout_rate 0.3, learning_rate 0.0001  [details](https://github.com/parolteknologio/stt-esperanto/blob/master/deepspeech-coqui/common-voice-corpus-7/2048-transfer-from-english.txt)|Google Colab Pro Plus| WER 24,7% (test was part of train dataset) [download](https://github.com/parolteknologio/stt-esperanto/tree/master/deepspeech-coqui/common-voice-corpus-7)|
-
-
-
 
 
 ## To do:

@@ -1,10 +1,11 @@
 # Scorer
+All scorers are experimental and not production ready yet!
 
 * https://stt.readthedocs.io/en/latest/LANGUAGE_MODEL.html
 * https://github.com/kpu/kenlm
 
 
-##  possible text sources - tekstaj fontoj:
+Usefull text sources - Utilaj tekstaj fontoj:
 
 * OSCAR Corpus (500 MB) https://oscar-corpus.com/post/oscar-v21-09/
 * The C4 Multilingual Dataset (2 GB) https://github.com/allenai/allennlp/discussions/5265 

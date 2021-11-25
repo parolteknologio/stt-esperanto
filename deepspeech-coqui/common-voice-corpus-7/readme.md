@@ -1,3 +1,3 @@
 # Common Voice Corpus 7.0
 
-Notes blabla
+Download best model: [eo-2048-transfer-25.tflite](https://github.com/parolteknologio/stt-esperanto/raw/master/deepspeech-coqui/common-voice-corpus-7/eo-2048-transfer-25.tflite)

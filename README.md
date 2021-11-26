@@ -8,6 +8,10 @@ Using deepspeech/coqui ai and the common voice dataset
 * https://stt.readthedocs.io/en/latest/
 * Tim jam kreis sistemon en esperantto: https://gitlab.com/54696d21
 
+Tools/Iloj
+
+* Ilo por krei subtekstojn en Esperanto [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/parolteknologio/stt-esperanto/blob/master/colab-notebooks/Subtekstoj_en_Esperanto.ipynb)
+
 ## eblaj datumfontoj
 
 |Datumaro|versio|grandeco|permesilo|

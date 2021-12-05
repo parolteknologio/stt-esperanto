@@ -7,4 +7,4 @@
 
 | Notebook | noto | Link to Colab |
 |----------------|-------------|-------------|
-|Subtekstoj_en_Esperanto.ipynb| Ilo por krei subtekstojn |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/parolteknologio/stt-esperanto/blob/master/colab-notebooks/Subtekstoj_en_Esperanto.ipynb) |
+|Subtekstoj_en_Esperanto.ipynb| Ilo por krei subtekstojn Video: [Kiel krei aŭtomatajn subtekstojn en Esperanto per Google Colab](https://www.youtube.com/watch?v=NZGj1Tb7MmA) |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/parolteknologio/stt-esperanto/blob/master/colab-notebooks/Subtekstoj_en_Esperanto.ipynb) |

@@ -11,6 +11,7 @@ Using deepspeech/coqui ai and the common voice dataset
 Tools/Iloj
 
 * Ilo por krei subtekstojn en Esperanto [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/parolteknologio/stt-esperanto/blob/master/colab-notebooks/Subtekstoj_en_Esperanto.ipynb)
+ Video: [Kiel krei aŭtomatajn subtekstojn en Esperanto per Google Colab](https://www.youtube.com/watch?v=NZGj1Tb7MmA)
 
 ## eblaj datumfontoj
 

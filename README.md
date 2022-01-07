@@ -29,6 +29,10 @@ Tools/Iloj
 |eo_41h_2019-12-10|?|2 x 1080 Ti 32Gb RAM (leadertelecom)| WER 0.5|
 |eo_844h_2021-07-21|english checkpoints, n_depth 2048, dropout_rate 0.3, learning_rate 0.0001  [details](https://github.com/parolteknologio/stt-esperanto/blob/master/deepspeech-coqui/common-voice-corpus-7/2048-transfer-from-english.txt)|Google Colab Pro Plus| WER 24,7% (test was part of train dataset) [download](https://github.com/parolteknologio/stt-esperanto/tree/master/deepspeech-coqui/common-voice-corpus-7)|
 
+## Vosk Model
+
+There is an Esperanto Vosk Model that can be used in many tools such as Kdenlive to create subtitles: https://alphacephei.com/vosk/models
+
 
 ## To do:
 - run ssh process in background next time (background + disown process)

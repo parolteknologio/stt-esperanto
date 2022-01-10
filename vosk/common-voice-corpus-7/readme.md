@@ -1,4 +1,4 @@
-# Vosk esperanto Model 01-01-2022
+# Vosk esperanto Model 07-01-2022
 
 From https://alphacephei.com/vosk/models
 

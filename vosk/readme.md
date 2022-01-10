@@ -1,4 +1,4 @@
-== Vosk model == 
+# Vosk model
 
 * https://alphacephei.com/vosk/models
 * https://paperswithcode.com/sota/speech-recognition-on-common-voice-esperanto

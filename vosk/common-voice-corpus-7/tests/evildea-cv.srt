@@ -1,0 +1,561 @@
+1
+00:00:00,060 --> 00:00:03,060
+saluton al ĉiuj jen evildea via dio
+
+2
+00:00:03,150 --> 00:00:05,730
+hodiaŭ mi intencas elŝuti amuzan filmon kiel
+
+3
+00:00:05,730 --> 00:00:08,640
+kutime sed hodiaŭ mi devas prokrasti tion
+
+4
+00:00:08,640 --> 00:00:10,770
+pro tio ke estas alia projekto kiu
+
+5
+00:00:10,770 --> 00:00:12,810
+estas multe pli grava kaj mi devas
+
+6
+00:00:12,810 --> 00:00:15,720
+priparoli ĝin tre baldaŭ do la projekto
+
+7
+00:00:15,780 --> 00:00:18,390
+estas homan bois dek brazila se vi
+
+8
+00:00:18,390 --> 00:00:20,160
+neniam aŭdis pri ĉi tiu pro je
+
+9
+00:00:20,160 --> 00:00:22,440
+lakto ne timu mi nun klarigas kio
+
+10
+00:00:22,440 --> 00:00:25,440
+ĝi estas do sence la retejon tekstas
+
+11
+00:00:25,440 --> 00:00:27,870
+la projekto common voice estas iniciato de
+
+12
+00:00:27,870 --> 00:00:30,660
+mozilla por helpi instrui al maŝinoj kiel
+
+13
+00:00:30,660 --> 00:00:33,870
+veraj homoj parolas voĉo estas natura voĉo
+
+14
+00:00:33,870 --> 00:00:36,510
+estas homa tion ni volegas krei uzeblajn
+
+15
+00:00:36,510 --> 00:00:39,360
+voĉajn teknologiojn por niaj maŝinoj sed por
+
+16
+00:00:39,360 --> 00:00:40,260
+krei voĉajn
+
+17
+00:00:40,320 --> 00:00:43,530
+sistemojn programistoj bezonas tre grandan kvanton da
+
+18
+00:00:43,530 --> 00:00:47,160
+voĉaj datumoj do kiu efektive ĉi tiu
+
+19
+00:00:47,190 --> 00:00:50,190
+retejo volas diri do esence ĝi kreas
+
+20
+00:00:50,190 --> 00:00:53,190
+programado kaj per ĉi tiu programaro ĝi
+
+21
+00:00:53,190 --> 00:00:57,300
+donos disponeblos al ni esperantistoj la plej
+
+22
+00:00:57,360 --> 00:01:00,480
+bonan kaj necesan ilon imagebla do
+
+23
+00:01:00,510 --> 00:01:04,320
+ĝuste nun mi pasigas tridek minutojn por
+
+24
+00:01:04,620 --> 00:01:07,770
+tajpi la subtekstojn por miaj filmoj nur
+
+25
+00:01:07,770 --> 00:01:10,080
+en la angla por fari tion en
+
+26
+00:01:10,080 --> 00:01:12,540
+ambaŭ lingvoj mi devas pasigi unu horo
+
+27
+00:01:12,660 --> 00:01:14,310
+kaj kompreneble mi ne havas tiom multe
+
+28
+00:01:14,310 --> 00:01:16,110
+da tempo kaj se mi ja havus
+
+29
+00:01:16,110 --> 00:01:18,030
+tiom multe da tempo mi volus fari
+
+30
+00:01:18,030 --> 00:01:20,610
+aliajn aferojn ekzemple ankoraŭ pli da
+
+31
+00:01:20,640 --> 00:01:22,830
+filmoj sed mi devos pasigi tion ĉar
+
+32
+00:01:22,830 --> 00:01:25,290
+mi volas helpi al komencantoj a de
+
+33
+00:01:25,290 --> 00:01:27,720
+mia kanalo kompreni tion kion mi diras
+
+34
+00:01:27,840 --> 00:01:30,450
+sed per ĉi tiu programaro kiom ĝi
+
+35
+00:01:30,450 --> 00:01:33,570
+estos preta mi povas paroli la klako
+
+36
+00:01:33,570 --> 00:01:37,470
+de fingro aŭtomate subtekstigi la tutan filmon
+
+37
+00:01:37,740 --> 00:01:40,710
+per klako de fingro imagu tion sed
+
+38
+00:01:40,800 --> 00:01:44,490
+por vere esti bona ilo ni bezonas
+
+39
+00:01:44,520 --> 00:01:47,550
+voĉojn esperantaj do jen tio kion ni
+
+40
+00:01:47,550 --> 00:01:51,540
+havos laŭ la retejo jam oni alŝutis
+
+41
+00:01:51,600 --> 00:01:54,900
+preskaŭ okcent horojn da voĉoj sed mi
+
+42
+00:01:54,900 --> 00:01:57,570
+bezonas du mil horojn da voĉoj por
+
+43
+00:01:57,570 --> 00:02:00,960
+krei bonan sistemon kaj kompreneble mi volas
+
+44
+00:02:00,960 --> 00:02:03,960
+ke vi ĉiuj helpo miaj filmoj ricevas
+
+45
+00:02:03,960 --> 00:02:08,820
+preskaŭ sepcent aspektojn kaj se ĉiuj el
+
+46
+00:02:08,820 --> 00:02:11,550
+la homoj kiuj spektas mian kanalon mi
+
+47
+00:02:11,550 --> 00:02:16,170
+ne scias registras pau eble kvindek voĉe
+
+48
+00:02:16,170 --> 00:02:19,410
+registraĵojn tio signifas ke ni havus preskaŭ
+
+49
+00:02:19,410 --> 00:02:21,120
+tridek kvin mil
+
+50
+00:02:21,180 --> 00:02:25,650
+voĉregistraĵo tio estus giganta sumo kaj verŝajne
+
+51
+00:02:25,650 --> 00:02:28,080
+la necesas sumo kiun ni bezonas do
+
+52
+00:02:28,080 --> 00:02:30,240
+por fari ĉi tion estas ege facila
+
+53
+00:02:30,240 --> 00:02:32,370
+kaj vi ne devas registri vian voĉon
+
+54
+00:02:32,370 --> 00:02:34,170
+se vi ne volas vi povas aŭskulti
+
+55
+00:02:34,170 --> 00:02:36,540
+la voĉon de aliaj kaj ankaŭ tio
+
+56
+00:02:36,570 --> 00:02:38,940
+multe helpos do jen tio kion vi
+
+57
+00:02:38,940 --> 00:02:41,220
+devas fari simple iru ĉi tien
+
+58
+00:02:41,280 --> 00:02:44,220
+kaj elektu paroli kaj aŭskulti kaj ne
+
+59
+00:02:44,220 --> 00:02:46,890
+timu ke vi havas malbonan mikrofonon ne
+
+60
+00:02:46,890 --> 00:02:49,890
+gravas ne gravas ĉu estas bruo anne
+
+61
+00:02:49,890 --> 00:02:52,140
+gravas ĉu estas aliaj voĉoj ĉu via
+
+62
+00:02:52,159 --> 00:02:55,770
+mikrofono estas aĉa la sistemo devos relerni
+
+63
+00:02:55,770 --> 00:02:59,010
+kiel apartigi la esperantajn voĉojn de la
+
+64
+00:02:59,010 --> 00:03:01,440
+bruo kaj la bona sono
+
+65
+00:03:01,470 --> 00:03:04,890
+lokaj tiu plu do tiu afektita helpos
+
+66
+00:03:04,897 --> 00:03:07,440
+do venu ĉi tien kaj simple iru
+
+67
+00:03:07,440 --> 00:03:09,810
+ekzemple alparoli do mi faras tion nun
+
+68
+00:03:09,810 --> 00:03:11,820
+por montri kiel ĝi funkcias mi nun
+
+69
+00:03:11,820 --> 00:03:15,120
+prenas mian kapaŭskultilo kaj ĝi simple volas
+
+70
+00:03:15,120 --> 00:03:17,520
+ke mi parolu ĝia paroligu ĉi tion
+
+71
+00:03:17,640 --> 00:03:20,250
+do mi faru tio kaj miaj gepatroj
+
+72
+00:03:20,250 --> 00:03:21,600
+loĝas sur la rando
+
+73
+00:03:21,630 --> 00:03:24,120
+do de la urbeto sur deklivo kaj
+
+74
+00:03:24,120 --> 00:03:26,280
+se mi volas ne aŭskulti tio kaj
+
+75
+00:03:26,280 --> 00:03:28,953
+miaj gepatroj loĝas sur la rando de
+
+76
+00:03:28,953 --> 00:03:32,310
+la urbeto sur deklivo enestas tiel bona
+
+77
+00:03:32,310 --> 00:03:35,880
+sed ne gravas johano ne mortu ne
+
+78
+00:03:35,880 --> 00:03:36,570
+mortu
+
+79
+00:03:38,820 --> 00:03:41,935
+ĉi tiu filmeto temas pri plendaĉo por
+
+80
+00:03:41,940 --> 00:03:43,590
+sentigi min pli ĝoja
+
+81
+00:03:45,810 --> 00:03:46,650
+ne filmu
+
+82
+00:03:48,870 --> 00:03:51,030
+ho fakte vi ne povas vidi ĝin
+
+83
+00:03:51,210 --> 00:03:53,700
+ĉar mi komencas antaŭ kelkaj tagoj
+
+84
+00:03:55,530 --> 00:03:57,690
+kaj tio estas ĉio kaj nun mi
+
+85
+00:03:57,690 --> 00:03:59,340
+simple elektu sendi
+
+86
+00:04:01,260 --> 00:04:03,780
+kaj ĝi sendis mian voĉon kaj se
+
+87
+00:04:03,780 --> 00:04:06,900
+mi volas ankoraŭ fali voĉregistraĵo en kaj
+
+88
+00:04:06,900 --> 00:04:09,420
+mi rekomendas ke vi ĉiuj faru almenaŭ
+
+89
+00:04:09,420 --> 00:04:12,900
+kvindek necesas eble dek minutojn aŭ de
+
+90
+00:04:12,923 --> 00:04:15,960
+kvin minutojn kaj tiam vi simple elektas
+
+91
+00:04:16,320 --> 00:04:18,720
+a ĉu vi pretas fari la kvin
+
+92
+00:04:18,720 --> 00:04:20,640
+pli kaj tio estas ĉio kaj
+
+93
+00:04:20,670 --> 00:04:22,632
+kiam vi estos preta vi povas vidi
+
+94
+00:04:22,650 --> 00:04:24,570
+en la supro de paĝo kiom multe
+
+95
+00:04:24,570 --> 00:04:27,390
+vi faris a kaj mi kredas ke
+
+96
+00:04:27,390 --> 00:04:30,810
+se ĉiuj el vi farus po kvindek
+
+97
+00:04:31,050 --> 00:04:35,340
+registraĵojn ni verŝajne havos la tutan projekton
+
+98
+00:04:35,340 --> 00:04:38,010
+fininta kaj rigardu ĉi tion ĉi tiu
+
+99
+00:04:38,010 --> 00:04:40,470
+estas mesaĝo de la ĉeforganizanto de la
+
+100
+00:04:40,470 --> 00:04:40,800
+pro je
+
+101
+00:04:40,800 --> 00:04:43,290
+lakto kaj a kiu vi verŝajne ĉiuj
+
+102
+00:04:43,290 --> 00:04:45,600
+konas estas bona amiko mia kaj ĝi
+
+103
+00:04:45,600 --> 00:04:47,550
+diris al mi al dua versio de
+
+104
+00:04:47,550 --> 00:04:51,060
+la programaro estos preta la dudekan de
+
+105
+00:04:51,060 --> 00:04:53,670
+ĉi tiu monato do ni bezonas multe
+
+106
+00:04:53,670 --> 00:04:56,670
+pli da registritaj voĉoj do jen kial
+
+107
+00:04:56,670 --> 00:04:58,800
+mi nun devas haste paroli pri ĉi
+
+108
+00:04:58,800 --> 00:05:00,958
+tio a kaj se vi volas ho
+
+109
+00:05:01,022 --> 00:05:04,500
+tio havi bonan programon kiu povas aŭtomatigi
+
+110
+00:05:04,500 --> 00:05:07,440
+la subtekstigita dum de esperantaj filmoj do
+
+111
+00:05:07,444 --> 00:05:09,806
+nepre venu do tio estas ĉio kion
+
+112
+00:05:09,806 --> 00:05:11,370
+mi volas diri pri ĉi tio kaj
+
+113
+00:05:11,370 --> 00:05:13,440
+efektive mi volas montri al vi unu
+
+114
+00:05:13,470 --> 00:05:16,770
+atenton aŭ retejon kiu jam uzas la
+
+115
+00:05:16,770 --> 00:05:19,440
+sistemon do mi povas tajpi ĉi tie
+
+116
+00:05:19,530 --> 00:05:21,090
+ion ajn en esperanto mi
+
+117
+00:05:21,120 --> 00:05:23,460
+volas manĝi kukon kaj tion mi elektas
+
+118
+00:05:23,460 --> 00:05:25,560
+ĉi tiun buteron kaj tiam mi povas
+
+119
+00:05:25,590 --> 00:05:29,340
+aŭskulti la registritan voĉon mi volas manĝi
+
+120
+00:05:29,340 --> 00:05:32,820
+kukon kaj kompreneble tio estos ankoraŭ ne
+
+121
+00:05:32,820 --> 00:05:37,380
+perfekta ĝi misprononcas kelkajn sonetojn sed vi
+
+122
+00:05:37,380 --> 00:05:40,380
+devas memori ke ĉi tiu programo uzis
+
+123
+00:05:40,410 --> 00:05:41,280
+nur du h
+
+124
+00:05:41,280 --> 00:05:44,520
+horojn da registritaj voĉoj nur du horojn
+
+125
+00:05:44,520 --> 00:05:48,690
+partio ĝi jam povas krei kompreneblajn frazojn
+
+126
+00:05:48,870 --> 00:05:51,510
+imagu kiam ni ĉiuj el la tuta
+
+127
+00:05:51,510 --> 00:05:55,014
+mondo alŝutas niajn voĉojn ĝi verŝajne povus
+
+128
+00:05:55,014 --> 00:05:58,440
+krei tre bonajn voĉparoli ligojn kaj tio
+
+129
+00:05:58,440 --> 00:06:01,350
+signifas ke ni povas a paroligi librojn
+
+130
+00:06:01,440 --> 00:06:04,140
+kaj aŭskulti ilin ni povas paroligi la
+
+131
+00:06:04,140 --> 00:06:07,140
+retejojn kaj aŭskulti ilin mi povas aŭtomate
+
+132
+00:06:07,140 --> 00:06:11,460
+krei subtekstojn estos perfekta kaj mi bezonas
+
+133
+00:06:11,460 --> 00:06:13,170
+tio do tio estas ĉio kion mi
+
+134
+00:06:13,170 --> 00:06:15,090
+volas diri se vi ŝatis ĉi tiun
+
+135
+00:06:15,090 --> 00:06:17,580
+filmeton vi scias kion vi devas fari
+
+136
+00:06:17,670 --> 00:06:19,920
+ŝatu ĝin diskonigu ĝin kaj iru al
+
+137
+00:06:19,920 --> 00:06:21,510
+ĉi tiu retejo a
+
+138
+00:06:21,600 --> 00:06:23,220
+ne ĉi tiu retejo sen aŭ ĉi
+
+139
+00:06:23,220 --> 00:06:26,610
+tiu retejo estas ligilo al priskribo kaj
+
+140
+00:06:26,610 --> 00:06:29,160
+kontribuu vian voĉon dankon
+
+

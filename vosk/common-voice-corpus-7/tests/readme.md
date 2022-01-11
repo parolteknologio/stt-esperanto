@@ -1,4 +1,4 @@
-# Testaj subteksto
+# Testaj subtekstoj
 
 * Anonco de Fremdulo 2: https://anchor.fm/fremdulo/episodes/200-Anonco-de-Fremdulo-2-ev0734
 * Evildea pri Common Voice: https://www.youtube.com/watch?v=FU61xCRz21w
